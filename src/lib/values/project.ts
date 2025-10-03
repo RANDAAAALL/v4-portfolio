@@ -15,7 +15,7 @@ export const projects = [
       id: 2,
       title: "Mobile Quiz App",
       description:
-        "An interactive programming quiz app built with React Native Expo and powered by Firebase, allowing users to upload profile pictures, track scores, view leaderboard rankings, and review quiz history in real time.",
+        "This is a project for ADV-102 an interactive programming quiz app built with React Native Expo and powered by Firebase, allowing users to upload profile pictures, track scores, view leaderboard rankings, and review quiz history in real time.",
       image: ["/quiz-app.png", "/quiz-app-leaderboard.png",],
       technologies: ["React Native Expo", "Typescript", "Javascript", "Node.js", "Express JS", "Firebase"],
       githubUrl: "https://github.com/RANDAAAALL/Quiz-App",
@@ -38,7 +38,7 @@ export const projects = [
       description:
         "A custom Discord bot built with the Discord API for the Back Benchers server. It features a predefined set of questions and answers, enabling quick automated responses to common queries.",
       image: "/discord-bot.png",
-      technologies: ["Javacsript", "Discord API", "Express JS", "Node Cron"],
+      technologies: ["Javacsript", "Discord API", "Express JS", "Node JS" ,"Node Cron"],
       githubUrl: "https://github.com/RANDAAAALL/discord-bot",
       featured: false,
     },

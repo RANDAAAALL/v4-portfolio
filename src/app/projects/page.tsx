@@ -38,15 +38,16 @@ export default function ProjectsPage() {
                     src="/randall-qt.png"
                     alt="profile-pic"
                     fill
-                    sizes="360px"/>
+                    sizes="360px"
+                    priority/>
 
                     {/* Hover Image */}
                     <Image
                     className="rounded-full object-cover hidden group-hover:block"
                     src="/randall-qt-rayban.png"
                     alt="profile-pic-hover"
-                    fill
                     sizes="360px"
+                    fill
                     priority/>
                 </div>
             <div>
@@ -84,26 +85,32 @@ export default function ProjectsPage() {
                     <Card key={project.id} className="group p-6">
                       <div>
                         <div>
-                          {Array.isArray(project.image) ? (
-                            <div className="flex">
-                              {project.image.map((img, index) => (
-                                <Image
-                                  key={index}
-                                  src={img}
-                                  alt={`${project.title} screenshot ${index + 1}`}
-                                  className="w-1/2 h-64 object-contain rounded-sm group-hover:scale-102 transition-transform duration-300"
-                                />
-                              ))}
+                        {Array.isArray(project.image) ? (
+                        <div className="flex justify-center gap-4">
+                          {project.image.map((img, index) => (
+                            <div
+                              key={index}
+                              className="w-full sm:w-1/2 lg:w-1/3 rounded-sm overflow-hidden">
+                              <Image
+                                src={img}
+                                alt={`${project.title} screenshot ${index + 1}`}
+                                width={400}
+                                height={250}
+                                className="object-cover w-full h-auto group-hover:scale-105 transition-transform duration-300"/>
                             </div>
-                          ) : (
-                            <Image
-                              src={project.image || "/placeholder.svg"}
-                              alt={project.title}
-                              className="w-full h-full object-cover rounded-sm group-hover:scale-102 transition-transform duration-300"
-                            />
-                          )}
+                          ))}
                         </div>
-
+                      ) : (
+                        <div className="w-full rounded-sm overflow-hidden">
+                          <Image
+                            src={project.image || "/placeholder.svg"}
+                            alt={project.title}
+                            width={600}
+                            height={350}
+                            className="object-cover w-full h-auto group-hover:scale-105 transition-transform duration-300"/>
+                        </div>
+                      )}
+                        </div>
                         <div className="mt-6">
                           <CardHeader className="p-0 mb-2">
                             <div className="flex items-center justify-between">
@@ -148,72 +155,76 @@ export default function ProjectsPage() {
                 </div>
               </div>
             )}
-
-        {/* Other Projects */}
+            {/* Other Projects */}
             {otherProjects.length > 0 && (
-            <div>
+              <div>
                 <h3 className="text-xl font-semibold text-foreground mb-6">Other Projects</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {otherProjects.map((project) => (
+                  {otherProjects.map((project) => (
                     <Card 
-                    key={project.id} 
-                    className="group flex flex-col overflow-hidden">
-                    {/* Image */}
-                    <div className="w-full h-48 overflow-hidden px-6 -mb-4">
-                        <Image
-                        src={(project.image as string) || "/placeholder.svg"}
-                        alt={project.title}
-                        className="w-full h-full object-cover rounded-sm group-hover:scale-102 transition-transform duration-300"
-                        />
-                    </div>
+                      key={project.id} 
+                      className="group flex flex-col"
+                    >
+                      {/* Image */}
+                      <div className="h-55 -mb-4 px-6">
+                        <div className="w-full h-full rounded-sm overflow-hidden">
+                          <Image
+                            src={(project.image as string) || "/placeholder.svg"}
+                            alt={project.title}
+                            width={400}
+                            height={250}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                      </div>
 
-                    {/* Content */}
-                    <div className="flex flex-col flex-1 p-6">
+                      {/* Content */}
+                      <div className="flex flex-col flex-1 p-6">
                         <CardHeader className="p-0 mb-2">
-                        <div className="flex items-center justify-between">
+                          <div className="flex items-center justify-between">
                             <CardTitle className="text-lg text-foreground group-hover:text-primary transition-colors">
-                            {project.title}
+                              {project.title}
                             </CardTitle>
                             <div className="flex space-x-2">
-                            {project.liveUrl && (
+                              {project.liveUrl && (
                                 <Link
-                                href={project.liveUrl}
-                                className="text-muted-foreground hover:text-primary transition-colors"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                  href={project.liveUrl}
+                                  className="text-muted-foreground hover:text-primary transition-colors"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                 >
-                                <ExternalLink className="h-5 w-5" />
+                                  <ExternalLink className="h-5 w-5" />
                                 </Link>
-                            )}
-                            <Link
+                              )}
+                              <Link
                                 href={project.githubUrl}
                                 className="text-muted-foreground hover:text-primary transition-colors"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                            >
+                              >
                                 <Github className="h-5 w-5" />
-                            </Link>
+                              </Link>
                             </div>
-                        </div>
+                          </div>
                         </CardHeader>
 
                         <CardContent className="p-0 flex flex-col flex-1">
-                        <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                          <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                             {project.description}
-                        </p>
-                        <div className="flex flex-wrap gap-2 mt-auto">
+                          </p>
+                          <div className="flex flex-wrap gap-2 mt-auto">
                             {project.technologies.map((tech) => (
-                            <Badge key={tech} variant="secondary" className="text-xs">
+                              <Badge key={tech} variant="secondary" className="text-xs">
                                 {tech}
-                            </Badge>
+                              </Badge>
                             ))}
-                        </div>
+                          </div>
                         </CardContent>
-                    </div>
+                      </div>
                     </Card>
-                ))}
+                  ))}
                 </div>
-            </div>
+              </div>
             )}
             {totalPages > 1 && (
               <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
