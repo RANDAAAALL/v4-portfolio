@@ -96,7 +96,7 @@ export default function ProjectsPage() {
                                 alt={`${project.title} screenshot ${index + 1}`}
                                 width={400}
                                 height={250}
-                                className="object-cover w-full h-auto group-hover:scale-105 transition-transform duration-300"/>
+                                className="object-cover w-full h-auto group-hover:scale-102 transition-transform duration-300"/>
                             </div>
                           ))}
                         </div>
@@ -107,7 +107,7 @@ export default function ProjectsPage() {
                             alt={project.title}
                             width={600}
                             height={350}
-                            className="object-cover w-full h-auto group-hover:scale-105 transition-transform duration-300"/>
+                            className="object-cover w-full h-auto group-hover:scale-102 transition-transform duration-300"/>
                         </div>
                       )}
                         </div>
@@ -173,7 +173,7 @@ export default function ProjectsPage() {
                             alt={project.title}
                             width={400}
                             height={250}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                           />
                         </div>
                       </div>
