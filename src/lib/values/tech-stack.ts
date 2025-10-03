@@ -42,5 +42,7 @@ export const techStack = {
       { name: "Git", description: "Version control system", icon: GitBranch },
       { name: "Java", description: "Object-oriented programming language", icon: Coffee },
       { name: "C++", description: "General-purpose programming language", icon: Code },
+      { name: "Android Studio", description: "Integrated development environment for Android app development", icon: Smartphone },
+      { name: "VS Code", description: "Lightweight and versatile source code editor with extensive extensions", icon: FileCode }    
     ],
   }
