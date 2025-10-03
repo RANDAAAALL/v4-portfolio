@@ -90,7 +90,7 @@ export default function TechStackPage() {
             <div className="mt-12 p-6 rounded-lg border border-border">
               <h3 className="text-lg font-semibold text-foreground mb-2">Always Learning</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Technology evolves rapidly, and I'm committed to continuous learning. I regularly explore new
+                Technology evolves rapidly, and I&rsquo;m committed to continuous learning. I regularly explore new
                 frameworks, languages, and tools to stay current with industry trends and best practices. Currently
                 diving deep into systems programming and exploring the intersection of web development and machine
                 learning.

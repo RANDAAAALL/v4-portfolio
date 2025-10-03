@@ -51,10 +51,10 @@ export function ContactForm({ children }: ContactFormProps) {
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <Mail className="h-5 w-5" />
-            Let's get in touch
+            Let&rsquo;s get in touch
           </DialogTitle>
           <DialogDescription>
-            I'd love to hear from you. Send me a message and I'll respond as soon as possible.
+            I&rsquo;d love to hear from you. Send me a message and I&rsquo;ll respond as soon as possible.
           </DialogDescription>
         </DialogHeader>
 

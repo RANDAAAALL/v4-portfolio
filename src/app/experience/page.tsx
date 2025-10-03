@@ -82,10 +82,10 @@ export default function ExperiencePage() {
             </div>
 
             <div className="mt-12 p-6 rounded-lg border border-border">
-              <h3 className="text-lg font-semibold text-foreground mb-4">Let's Work Together</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-4">Let&rsquo;s Work Together</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                I'm always interested in new opportunities and exciting projects.
-                Whether you're looking for a developer or collaborator, I'd love to hear from you.
+                I&rsquo;m always interested in new opportunities and exciting projects.
+                Whether you&rsquo;re looking for a developer or collaborator, I&rsquo;d love to hear from you.
               </p>
               <Link
                 href="lesterandig17@gmail.com"

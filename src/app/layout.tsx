@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Suspense fallback={null}>{children}</Suspense>
-          {/* <Analytics /> */}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

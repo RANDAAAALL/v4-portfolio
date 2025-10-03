@@ -1,6 +1,5 @@
 import { Navigation } from "@/components/ui/navigation/navigation"
 import { SocialLinks } from "@/components/ui/socials/social-links"
-import { Badge } from "@/components/ui/badge"
 import { ContactForm } from "@/components/ui/form/contact-form"
 import { Mail } from "lucide-react"
 import { ThemeToggle } from "@/components/ui/theme/theme-toggle"
@@ -53,11 +52,11 @@ export default function HomePage() {
           <div className="lg:col-span-8 space-y-12">
             <section>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                I'm a developer passionate about building <span className="text-primary font-medium">user-friendly web applications</span>, with a strong focus on creating websites that are both visually appealing and highly functional. I enjoy working at the intersection of design and development, crafting digital experiences that are seamless, responsive, and easy to use.
+                I&rsquo;m a developer passionate about building <span className="text-primary font-medium">user-friendly web applications</span>, with a strong focus on creating websites that are both visually appealing and highly functional. I enjoy working at the intersection of design and development, crafting digital experiences that are seamless, responsive, and easy to use.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Currently, I'm a <span className="text-primary font-medium">3rd-year BSIT student</span>, enhancing my skills in modern web development while also working as a <span className="text-primary font-medium">freelancer</span>, taking on projects that challenge me to deliver high-quality solutions for real-world clients.
+                Currently, I&rsquo;m a <span className="text-primary font-medium">3rd-year BSIT student</span>, enhancing my skills in modern web development while also working as a <span className="text-primary font-medium">freelancer</span>, taking on projects that challenge me to deliver high-quality solutions for real-world clients.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -95,13 +94,13 @@ export default function HomePage() {
               <div className="space-y-4">
                 <h2 className="text-2xl font-bold text-foreground">Ready to work together?</h2>
                 <p className="text-muted-foreground max-w-md">
-                  I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your
+                  I&rsquo;m always interested in new opportunities and exciting projects. Let&rsquo;s discuss how we can bring your
                   ideas to life.
                 </p>
                 <ContactForm>
                   <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-md font-medium transition-colors">
                     <Mail className="h-4 w-4" />
-                    Let's get in touch
+                    Let&rsquo;s get in touch
                   </button>
                 </ContactForm>
               </div>

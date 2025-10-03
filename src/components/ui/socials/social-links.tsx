@@ -2,7 +2,6 @@ import Link from "next/link"
 import { ContactForm } from "../form/contact-form"
 import { Mail } from "lucide-react"
 import { socialLinks } from "@/lib/values/socials"
-import { ThemeToggle } from "../theme/theme-toggle"
 
 export function SocialLinks() {
   return (

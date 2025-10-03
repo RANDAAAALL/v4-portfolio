@@ -70,7 +70,7 @@ export default function ProjectsPage() {
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-foreground mb-4">Projects</h2>
               <p className="text-muted-foreground leading-relaxed">
-                A selection of projects I've worked on, ranging from web applications to personal and academic projects..
+                A selection of projects  I&apos;ve worked on, ranging from web applications to personal and academic projects..
               </p>
             </div>
 
@@ -86,7 +86,7 @@ export default function ProjectsPage() {
                           {Array.isArray(project.image) ? (
                             <div className="flex">
                               {project.image.map((img, index) => (
-                                <img
+                                <Image
                                   key={index}
                                   src={img}
                                   alt={`${project.title} screenshot ${index + 1}`}
@@ -95,7 +95,7 @@ export default function ProjectsPage() {
                               ))}
                             </div>
                           ) : (
-                            <img
+                            <Image
                               src={project.image || "/placeholder.svg"}
                               alt={project.title}
                               className="w-full h-full object-cover rounded-sm group-hover:scale-102 transition-transform duration-300"
@@ -159,7 +159,7 @@ export default function ProjectsPage() {
                     className="group flex flex-col overflow-hidden">
                     {/* Image */}
                     <div className="w-full h-48 overflow-hidden px-6 -mb-4">
-                        <img
+                        <Image
                         src={(project.image as string) || "/placeholder.svg"}
                         alt={project.title}
                         className="w-full h-full object-cover rounded-sm group-hover:scale-102 transition-transform duration-300"
