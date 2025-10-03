@@ -8,7 +8,7 @@ import { Suspense } from "react"
 import { ThemeProvider } from "@/components/ui/providers/theme-provider"
 
 export const metadata: Metadata = {
-  title: "Lester Andig - Full Stack Developer",
+  title: "Lester Andig",
   description:
     "Portfolio of Lester Andig - Full Stack Developer specializing in React, Next.js, and modern web technologies",
 }

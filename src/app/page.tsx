@@ -19,8 +19,7 @@ export default function HomePage() {
                     src="/randall-qt.png"
                     alt="profile-pic"
                     fill
-                    sizes="360px"
-                  />
+                    sizes="360px"/>
 
                   {/* Hover Image */}
                   <Image
@@ -29,7 +28,7 @@ export default function HomePage() {
                     alt="profile-pic-hover"
                     fill
                     sizes="360px"
-                  />
+                    priority/>
               </div>
             <div>
               <div className="flex items-start justify-between mb-2">
