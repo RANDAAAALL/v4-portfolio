@@ -11,6 +11,8 @@ import { Pagination } from "@/components/ui/pagination/pagination"
 import { useState } from "react"
 import { projects } from "@/lib/values/project"
 import Image from "next/image"
+import DownloadCVButton from "@/components/ui/download-button/download-cv-button"
+import { Footer } from "@/components/ui/footer/all-rights-reserved"
 
 const ITEMS_PER_PAGE = 6
 
@@ -30,7 +32,7 @@ export default function ProjectsPage() {
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Sidebar */}
-          <div className="lg:col-span-4 space-y-8">
+          <div className="lg:col-span-4 space-y-5">
                 <div className="relative w-55 h-55 ml-5 group">
                     {/* Default Image */}
                     <Image
@@ -65,6 +67,7 @@ export default function ProjectsPage() {
 
             <Navigation />
             <SocialLinks />
+            <DownloadCVButton />
           </div>
 
           {/* Main Content */}
@@ -232,6 +235,7 @@ export default function ProjectsPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

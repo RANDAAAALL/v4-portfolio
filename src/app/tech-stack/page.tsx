@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ThemeToggle } from "@/components/ui/theme/theme-toggle"
 import { techStack } from "@/lib/values/tech-stack"
 import Image from "next/image"
+import DownloadCVButton from "@/components/ui/download-button/download-cv-button"
+import { Footer } from "@/components/ui/footer/all-rights-reserved"
 
 export default function TechStackPage() {
   return (
@@ -45,6 +47,7 @@ export default function TechStackPage() {
 
             <Navigation />
             <SocialLinks />
+            <DownloadCVButton />
           </div>
 
           {/* Main Content */}
@@ -100,6 +103,7 @@ export default function TechStackPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
