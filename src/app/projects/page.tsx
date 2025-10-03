@@ -46,7 +46,8 @@ export default function ProjectsPage() {
                     src="/randall-qt-rayban.png"
                     alt="profile-pic-hover"
                     fill
-                    sizes="360px"/>
+                    sizes="360px"
+                    priority/>
                 </div>
             <div>
               <div className="flex items-start justify-between mb-2">
