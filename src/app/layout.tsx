@@ -6,7 +6,6 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Suspense } from "react"
 import { ThemeProvider } from "@/components/ui/providers/theme-provider"
-import { Toaster, ToastBar } from "react-hot-toast"
 import ToasterClient from "@/components/ui/toast/toast-client"
 
 export const metadata: Metadata = {
