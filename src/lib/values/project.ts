@@ -4,22 +4,25 @@ export const projects = [
       id: 1,
       title: "Abante Clothing",
       description:
-        "A full-stack e-commerce web application built with Next.js, designed as the final project for IM-101. The platform includes user authentication, payment processing integration, and an admin dashboard",
+        "A full-stack e-commerce web application built with Next.js, designed as the final project for IM-101. The platform includes user authentication, payment processing integration, customer and an admin dashboard",
       image: "/abante-clothing.png",
       technologies: ["Next.js", "TypeScript", "Bun", "Prisma", "Mysql", "Xendit", "Cloudinary" ,"Tailwind CSS", "Shadcn UI"],
       liveUrl: "https://abante-clothing.vercel.app",
       githubUrl: "https://github.com/RANDAAAALL/Abante-Clothing",
       featured: true,
+      type: "School Project",
+      status: "Under development"
     },
     {
       id: 2,
       title: "Mobile Quiz App",
       description:
-        "This is a project for ADV-102 an interactive programming quiz app built with React Native Expo and powered by Firebase, allowing users to upload profile pictures, track scores, view leaderboard rankings, and review quiz history in real time.",
+        "A full-stack programming quiz app built with React Native Expo and powered by Firebase, designed as the final project for ADV-102. The application allow users to upload profile pictures, track scores, view leaderboard rankings, and review quiz history in real time.",
       image: ["/quiz-app.png", "/quiz-app-leaderboard.png",],
-      technologies: ["React Native Expo", "Typescript", "Javascript", "Node.js", "Express JS", "Firebase"],
+      technologies: ["React Native Expo", "Typescript", "Javascript", "Node.js", "Express.js", "Firebase", "QuizAPI"],
       githubUrl: "https://github.com/RANDAAAALL/Quiz-App",
       featured: true,
+      type: "School Project",
     },
     {
       id: 3,
@@ -31,6 +34,7 @@ export const projects = [
       liveUrl: "https://randaaaall.github.io/speed-typing-test/",
       githubUrl: "https://github.com/RANDAAAALL/speed-typing-test",
       featured: false,
+      type: "Personal Project",
     },
     {
       id: 4,
@@ -38,9 +42,10 @@ export const projects = [
       description:
         "A custom Discord bot built with the Discord API for the Back Benchers server. It features a predefined set of questions and answers, enabling quick automated responses to common queries.",
       image: "/discord-bot.png",
-      technologies: ["Javacsript", "Discord API", "Express JS", "Node JS" ,"Node Cron"],
+      technologies: ["Javacsript", "Discord API", "Express.js", "Node.js" ,"Node Cron"],
       githubUrl: "https://github.com/RANDAAAALL/discord-bot",
       featured: false,
+      type: "Personal Project",
     },
     {
       id: 5,
@@ -52,6 +57,7 @@ export const projects = [
       liveUrl: "https://randaaaall.github.io/Digital-Clock/",
       githubUrl: "https://github.com/RANDAAAALL/Digital-Clock",
       featured: false,
+      type: "Personal Project",
     },
     {
       id: 6,
@@ -62,6 +68,7 @@ export const projects = [
       technologies: ["Java", "Java Swing"],
       githubUrl: "https://github.com/RANDAAAALL/medical-appointment-system",
       featured: false,
+      type: "School Project", 
     },
     {
       id: 7,
@@ -72,25 +79,28 @@ export const projects = [
       technologies: ["Java",  "Java Swing"],
       githubUrl: "https://github.com/RANDAAAALL/car-rental-system",
       featured: false,
+      type: "School Project",
     },
     {
       id: 8,
       title: "CLI Quiz App",
       description:
-        "A simple static command-line quiz game developed as a final project, featuring predefined questions and answers to test basic knowledge in an interactive way.",
-        image: "/cli-quiz-app.png",
-        technologies: ["C++"],
-        githubUrl: "https://github.com/RANDAAAALL/1st_Sem_QuizGameFinalProject",
-        featured: false,
+      "A simple static command-line quiz game developed as a final project, featuring predefined questions and answers to test basic knowledge in an interactive way.",
+      image: "/cli-quiz-app.png",
+      technologies: ["C++"],
+      githubUrl: "https://github.com/RANDAAAALL/1st_Sem_QuizGameFinalProject",
+      featured: false,
+      type: "School Project",
       },
       {
-        id: 9,
-        title: "Restaurant Management System",
-        description:
-          "A restaurant management system GUI built with Java Swing featuring both admin and customer panels. The system allows uploading food images, adding order items to a cart, managing orders, and generating receipts through an interactive graphical user interface.",
-        image: "/restaurant-management-system.png",
-        technologies: ["Java", "Java Swing",  "Mysql JDBC Driver", "Mysql"],
-        githubUrl: "https://github.com/RANDAAAALL/restaurant-management-system",
-        featured: false,
+      id: 9,
+      title: "Restaurant Management System",
+      description:
+        "A restaurant management system GUI built with Java Swing featuring both admin and customer panels. The system allows uploading food images, adding order items to a cart, managing orders, and generating receipts through an interactive graphical user interface.",
+      image: "/restaurant-management-system.png",
+      technologies: ["Java", "Java Swing",  "Mysql JDBC Driver", "Mysql"],
+      githubUrl: "https://github.com/RANDAAAALL/restaurant-management-system",
+      featured: false,
+      type: "School Project",
       },
   ]

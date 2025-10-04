@@ -91,34 +91,45 @@ export default function ProjectsPage() {
                         {Array.isArray(project.image) ? (
                         <div className="flex justify-center gap-4">
                           {project.image.map((img, index) => (
-                            <div
-                              key={index}
-                              className="w-full sm:w-1/2 lg:w-1/3 rounded-sm overflow-hidden">
-                              <Image
-                                src={img}
-                                alt={`${project.title} screenshot ${index + 1}`}
-                                width={400}
-                                height={250}
-                                className="object-cover w-full h-auto group-hover:scale-102 transition-transform duration-300"/>
-                            </div>
+                           <div
+                           key={index}
+                           className="relative w-full sm:w-1/2 lg:w-1/3 rounded-sm overflow-hidden"
+                         >
+                           <Image
+                             src={img}
+                             alt={`${project.title} screenshot ${index + 1}`}
+                             width={400}
+                             height={250}
+                             className="object-cover w-full h-auto group-hover:scale-102 transition-transform duration-300"
+                           />
+                         </div>
+                         
                           ))}
                         </div>
                       ) : (
-                        <div className="w-full rounded-sm overflow-hidden">
+                        <div className="relative w-full rounded-sm overflow-hidden">
                           <Image
                             src={project.image || "/placeholder.svg"}
                             alt={project.title}
                             width={600}
                             height={350}
-                            className="object-cover w-full h-auto group-hover:scale-102 transition-transform duration-300"/>
-                        </div>
-                      )}
+                            className="object-cover w-full h-auto group-hover:scale-102 transition-transform duration-300"/>                        
+                            {project.status && (
+                                <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                  <span className="text-white text-sm font-semibold px-3 py-1 rounded">
+                                    {project.status}
+                                  </span>
+                                </div>
+                              )}
+                          </div>
+                        )}
                         </div>
                         <div className="mt-6">
                           <CardHeader className="p-0 mb-2">
                             <div className="flex items-center justify-between">
                               <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
-                                {project.title}
+                              {project.title}
+                              {/* {project.type && <span className="ml-1 text-foreground">| {project.type}</span>} */}
                               </CardTitle>
                               <div className="flex space-x-2">
                                 {project.liveUrl && (
