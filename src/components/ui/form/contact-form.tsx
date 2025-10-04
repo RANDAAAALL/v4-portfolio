@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -16,13 +15,12 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Mail, Send } from "lucide-react"
-import { useToast } from "@/hooks/use-toast"
 import { ContactFormProps } from "@/lib/interface/contact-form-props"
+import { toast } from "react-hot-toast"
 
 export function ContactForm({ children }: ContactFormProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const { toast } = useToast()
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -31,10 +29,7 @@ export function ContactForm({ children }: ContactFormProps) {
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000))
 
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    })
+    toast("Message Sent! Thanks for reaching out. I'll get back to you soon.", {icon: "😎"})
 
     setIsSubmitting(false)
     setIsOpen(false)

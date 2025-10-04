@@ -6,6 +6,8 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Suspense } from "react"
 import { ThemeProvider } from "@/components/ui/providers/theme-provider"
+import { Toaster, ToastBar } from "react-hot-toast"
+import ToasterClient from "@/components/ui/toast/toast-client"
 
 export const metadata: Metadata = {
   title: "Lester Andig",
@@ -23,6 +25,7 @@ export default function RootLayout({
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Suspense fallback={null}>{children}</Suspense>
+          <ToasterClient />
           <Analytics />
         </ThemeProvider>
       </body>
