@@ -52,7 +52,7 @@ export default function ExperiencePage() {
           </div>
 
           {/* Main Content */}
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-8 min-h-screen">
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-foreground mb-4">Experience</h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -100,7 +100,9 @@ export default function ExperiencePage() {
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="px-6"> 
+        <Footer />
+      </div>
     </div>
   )
 }

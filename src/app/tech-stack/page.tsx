@@ -103,7 +103,9 @@ export default function TechStackPage() {
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="px-6"> 
+        <Footer />
+      </div>
     </div>
   )
 }

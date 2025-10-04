@@ -51,7 +51,7 @@ export default function HomePage() {
           </div>
 
           {/* Main Content */}
-          <div className="lg:col-span-8 space-y-12">
+          <div className="lg:col-span-8 space-y-12 h-auto lg:h-screen">
             <section>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 I&rsquo;m a developer passionate about building <span className="text-primary font-medium">user-friendly web applications</span>, with a strong focus on creating websites that are both visually appealing and highly functional. I enjoy working at the intersection of design and development, crafting digital experiences that are seamless, responsive, and easy to use.
@@ -110,7 +110,9 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      <div className="px-6"> 
         <Footer />
+      </div>
     </div>
   )
 }

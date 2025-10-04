@@ -246,7 +246,9 @@ export default function ProjectsPage() {
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="px-6"> 
+        <Footer />
+      </div>
     </div>
   )
 }
