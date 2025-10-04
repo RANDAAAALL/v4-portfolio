@@ -1,5 +1,4 @@
 "use client"
-
 import type React from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -26,10 +25,33 @@ export function ContactForm({ children }: ContactFormProps) {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    const formData = new FormData(e.currentTarget)
+    const firstName = formData.get("firstName") as string
+    const lastName = formData.get("lastName") as string
+    const email = formData.get("email") as string
+    const subject = formData.get("subject") as string
+    const message = formData.get("message") as string
 
-    toast("Message Sent! Thanks for reaching out. I'll get back to you soon.", {icon: "😎"})
+    // Simulate form submission
+    // await new Promise((resolve) => setTimeout(resolve, 1000))
+    const res = await fetch("/api/send-email", { 
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({
+        name: `${firstName} ${lastName}`,
+        senderEmail: email,
+        subject,
+        message 
+      })
+     });
+
+     const data = await res.json();     
+     if(!res.ok) toast.error(`${data?.errorMessage || "Failed to send a message"}`)
+     else {
+      toast("Message Sent! Thanks for reaching out. I'll get back to you soon.", {icon: "😎"})
+      console.log("data:", data?.payload)
+    }
+     
 
     setIsSubmitting(false)
     setIsOpen(false)
