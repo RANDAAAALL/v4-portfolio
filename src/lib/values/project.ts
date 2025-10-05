@@ -6,7 +6,7 @@ export const projects = [
       description:
         "A full-stack e-commerce web application built with Next.js, designed as the final project for IM-101. The platform includes user authentication, payment processing integration, customer and an admin dashboard",
       image: "/abante-clothing.png",
-      technologies: ["Next.js", "TypeScript", "Bun", "Prisma", "Mysql", "Xendit", "Cloudinary" ,"Tailwind CSS", "Shadcn UI"],
+      technologies: ["Next.js", "TypeScript", "Bun", "Prisma", "Mysql", "Tailwind CSS", "Shadcn UI", "Xendit", "Cloudinary", "Aiven", "React Mail"],
       liveUrl: "https://abante-clothing.vercel.app",
       githubUrl: "https://github.com/RANDAAAALL/Abante-Clothing",
       featured: true,
