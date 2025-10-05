@@ -6,7 +6,7 @@ export const projects = [
       description:
         "A full-stack e-commerce web application built with Next.js, designed as the final project for IM-101. The platform includes user authentication, payment processing integration, customer and an admin dashboard",
       image: "/abante-clothing.png",
-      technologies: ["Next.js", "TypeScript", "Bun", "Prisma", "Mysql", "Tailwind CSS", "Shadcn UI", "Xendit", "Cloudinary", "Aiven", "React Mail"],
+      technologies: ["Next.js", "TypeScript", "Bun", "Prisma", "Mysql", "Tailwind CSS", "Shadcn UI", "Xendit", "Cloudinary", "Aiven", "React Email", "Resend API"],
       liveUrl: "https://abante-clothing.vercel.app",
       githubUrl: "https://github.com/RANDAAAALL/Abante-Clothing",
       featured: true,
@@ -19,13 +19,24 @@ export const projects = [
       description:
         "A full-stack programming quiz app built with React Native Expo and powered by Firebase, designed as the final project for ADV-102. The application allow users to upload profile pictures, track scores, view leaderboard rankings, and review quiz history in real time.",
       image: ["/quiz-app.png", "/quiz-app-leaderboard.png",],
-      technologies: ["React Native Expo", "Typescript", "Javascript", "Node.js", "Express.js", "Firebase", "QuizAPI"],
+      technologies: ["React Native Expo", "Typescript", "Javascript", "Node.js", "Express.js", "Firebase", "REST API", "QuizAPI"],
       githubUrl: "https://github.com/RANDAAAALL/Quiz-App",
       featured: true,
       type: "School Project",
     },
     {
       id: 3,
+      title: "Personal Portfolio",
+      description:
+        "A personal portfolio website that showcases my projects, skills, and experience as a full-stack developer.",
+      image: "/personal-portfolio.png",
+      technologies: ["Next.js", "Typescript", "TailwindCSS", "Bun", "Resend API", "REST API"],
+      githubUrl: "https://github.com/RANDAAAALL/v4-portfolio",
+      featured: true,
+      type: "Personal Project",
+    },
+    {
+      id: 4,
       title: "Speedtyping test",
       description:
         "A speed typing test built with native web technologies. The app challenges users with a static word list, measuring typing speed and accuracy in real time without the use of external frameworks.",
@@ -37,7 +48,7 @@ export const projects = [
       type: "Personal Project",
     },
     {
-      id: 4,
+      id: 5,
       title: "Discord bot",
       description:
         "A custom Discord bot built with the Discord API for the Back Benchers server. It features a predefined set of questions and answers, enabling quick automated responses to common queries.",
@@ -48,7 +59,7 @@ export const projects = [
       type: "Personal Project",
     },
     {
-      id: 5,
+      id: 6,
       title: "Digital Clock",
       description:
         "A real-time digital clock built with native web technologies, designed to display the current time in the Philippines accurately and continuously without relying on external libraries.",
@@ -60,7 +71,7 @@ export const projects = [
       type: "Personal Project",
     },
     {
-      id: 6,
+      id: 7,
       title: "Medical Appointment System",
       description:
         "A medical appointment system GUI that allows adding, updating, and deleting patient records, including details such as name, age, gender, location, phone number, and appointment time.",
@@ -71,7 +82,7 @@ export const projects = [
       type: "School Project", 
     },
     {
-      id: 7,
+      id: 8,
       title: "Car Rental System",
       description:
       "A car rental system GUI with user registration and login functionality, enabling the management of car and customer information. The system allows adding, updating, and deleting records while also checking car rental availability.",
@@ -82,7 +93,7 @@ export const projects = [
       type: "School Project",
     },
     {
-      id: 8,
+      id: 9,
       title: "CLI Quiz App",
       description:
       "A simple static command-line quiz game developed as a final project, featuring predefined questions and answers to test basic knowledge in an interactive way.",
@@ -93,7 +104,7 @@ export const projects = [
       type: "School Project",
       },
       {
-      id: 9,
+      id: 10,
       title: "Restaurant Management System",
       description:
         "A restaurant management system GUI built with Java Swing featuring both admin and customer panels. The system allows uploading food images, adding order items to a cart, managing orders, and generating receipts through an interactive graphical user interface.",

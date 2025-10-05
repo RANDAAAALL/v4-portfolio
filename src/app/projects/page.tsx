@@ -14,7 +14,7 @@ import Image from "next/image"
 import DownloadCVButton from "@/components/ui/download-button/download-cv-button"
 import { Footer } from "@/components/ui/footer/all-rights-reserved"
 
-const ITEMS_PER_PAGE = 6
+const ITEMS_PER_PAGE = 7
 
 export default function ProjectsPage() {
   const [currentPage, setCurrentPage] = useState(1)
@@ -93,8 +93,7 @@ export default function ProjectsPage() {
                           {project.image.map((img, index) => (
                            <div
                            key={index}
-                           className="relative w-full sm:w-1/2 lg:w-1/3 rounded-sm overflow-hidden"
-                         >
+                           className="relative w-full sm:w-1/2 lg:w-1/3 rounded-sm overflow-hidden">
                            <Image
                              src={img}
                              alt={`${project.title} screenshot ${index + 1}`}
@@ -103,7 +102,6 @@ export default function ProjectsPage() {
                              className="object-cover w-full h-auto group-hover:scale-102 transition-transform duration-300"
                            />
                          </div>
-                         
                           ))}
                         </div>
                       ) : (
@@ -113,7 +111,7 @@ export default function ProjectsPage() {
                             alt={project.title}
                             width={600}
                             height={350}
-                            className="object-cover w-full h-auto group-hover:scale-102 transition-transform duration-300"/>                        
+                            className="object-cover w-full group-hover:scale-102 transition-transform duration-300"/>                        
                             {project.status && (
                                 <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                   <span className="text-white text-sm font-semibold px-3 py-1 rounded">
@@ -177,8 +175,7 @@ export default function ProjectsPage() {
                   {otherProjects.map((project) => (
                     <Card 
                       key={project.id} 
-                      className="group flex flex-col"
-                    >
+                      className="group flex flex-col">
                       {/* Image */}
                       <div className="h-55 -mb-4 px-6">
                         <div className="w-full h-full rounded-sm overflow-hidden">
@@ -205,8 +202,7 @@ export default function ProjectsPage() {
                                   href={project.liveUrl}
                                   className="text-muted-foreground hover:text-primary transition-colors"
                                   target="_blank"
-                                  rel="noopener noreferrer"
-                                >
+                                  rel="noopener noreferrer">
                                   <ExternalLink className="h-5 w-5" />
                                 </Link>
                               )}
@@ -214,8 +210,7 @@ export default function ProjectsPage() {
                                 href={project.githubUrl}
                                 className="text-muted-foreground hover:text-primary transition-colors"
                                 target="_blank"
-                                rel="noopener noreferrer"
-                              >
+                                rel="noopener noreferrer">
                                 <Github className="h-5 w-5" />
                               </Link>
                             </div>
