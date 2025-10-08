@@ -75,7 +75,7 @@ export default function ProjectsPage() {
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-foreground mb-4">Projects</h2>
               <p className="text-muted-foreground leading-relaxed">
-                A selection of projects  I&apos;ve worked on, ranging from web applications to personal and academic projects..
+                A selection of projects  I&apos;ve worked on, ranging from web applications to personal and academic projects.
               </p>
             </div>
 
@@ -151,7 +151,7 @@ export default function ProjectsPage() {
                           </CardHeader>
 
                           <CardContent className="p-0">
-                            <p className="text-muted-foreground leading-relaxed mb-4">{project.description}</p>
+                            <p className="text-muted-foreground text-justify hyphens-auto leading-relaxed mb-4">{project.description}</p>
                             <div className="flex flex-wrap gap-2">
                               {project.technologies.map((tech) => (
                                 <Badge key={tech} variant="secondary">
@@ -218,7 +218,7 @@ export default function ProjectsPage() {
                         </CardHeader>
 
                         <CardContent className="p-0 flex flex-col flex-1">
-                          <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                          <p className="text-muted-foreground text-sm leading-relaxed mb-4  hyphens-auto text-justify">
                             {project.description}
                           </p>
                           <div className="flex flex-wrap gap-2 mt-auto">
