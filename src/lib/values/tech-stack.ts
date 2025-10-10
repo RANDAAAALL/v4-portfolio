@@ -31,6 +31,7 @@ export const techStack = {
     ],
     Backend: [
       { name: "Node.js", description: "JavaScript runtime",  icon: Server },
+      { name: "Next.js", description: "Full-stack React framework", icon: Zap },
       { name: "Express.js", description: "Web framework for Node.js", icon: Server },
       { name: "Bun", description: "Fast JavaScript runtime", icon: Coffee },
       { name: "Prisma", description: "Next-generation ORM", icon: Database },

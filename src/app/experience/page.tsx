@@ -92,7 +92,7 @@ export default function ExperiencePage() {
                 Whether you&rsquo;re looking for a developer or collaborator, I&rsquo;d love to hear from you.
               </p>
               <Link
-                href="lesterandig17@gmail.com"
+                href="mailto:lesterandig17@gmail.com"
                 className="inline-flex items-center text-primary hover:underline">
                 Get in touch →
               </Link>
