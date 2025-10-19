@@ -15,7 +15,7 @@ export default function ContactEmail({ name, email, subject, message }: ContactE
             </Text>
             <Text><strong>Name:</strong> {name}</Text>
             <Text><strong>Email:</strong> {email}</Text>
-            <Text><strong>Email:</strong> {subject}</Text>
+            <Text><strong>Subject:</strong> {subject}</Text>
             <Text><strong>Message:</strong> <span style={{whiteSpace: "pre-line"}}>{message}</span></Text>
           </Section>
         </Container>
