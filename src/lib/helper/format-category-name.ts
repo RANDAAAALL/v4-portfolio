@@ -1,5 +1,5 @@
 export function formatCategoryName(category: string) {
-    let formatted = category.replace(/_/g, " ").replace(/\s+/g, " ");
+    const formatted = category.replace(/_/g, " ").replace(/\s+/g, " ");
   
     let hasInserted = false;
   
