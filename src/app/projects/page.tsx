@@ -8,24 +8,17 @@ import { ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
 import { ThemeToggle } from "@/components/ui/theme/theme-toggle"
 import { Pagination } from "@/components/ui/pagination/pagination"
-import { useState } from "react"
 import { projects } from "@/lib/values/project"
 import Image from "next/image"
 import DownloadCVButton from "@/components/ui/download-button/download-cv-button"
 import { Footer } from "@/components/ui/footer/all-rights-reserved"
-
-const ITEMS_PER_PAGE = 7
+import { usePagination } from "@/hooks/usePagination"
 
 export default function ProjectsPage() {
-  const [currentPage, setCurrentPage] = useState(1)
+  const { currentItems, currentPage, totalPages, setCurrentPage } = usePagination(projects, 7);
 
-  const totalPages = Math.ceil(projects.length / ITEMS_PER_PAGE)
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE
-  const endIndex = startIndex + ITEMS_PER_PAGE
-  const currentProjects = projects.slice(startIndex, endIndex)
-
-  const featuredProjects = currentProjects.filter((project) => project.featured)
-  const otherProjects = currentProjects.filter((project) => !project.featured)
+  const featuredProjects = currentItems.filter((project) => project.featured)
+  const otherProjects = currentItems.filter((project) => !project.featured)
 
   return (
     <div className="min-h-screen bg-background">

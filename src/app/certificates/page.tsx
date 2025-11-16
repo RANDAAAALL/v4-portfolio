@@ -1,13 +1,18 @@
+"use client"
 import DownloadCVButton from "@/components/ui/download-button/download-cv-button";
 import { Footer } from "@/components/ui/footer/all-rights-reserved";
 import { CertificateModal } from "@/components/ui/modal/certificate-modal";
 import { Navigation } from "@/components/ui/navigation/navigation";
+import { Pagination } from "@/components/ui/pagination/pagination";
 import { SocialLinks } from "@/components/ui/socials/social-links";
 import { ThemeToggle } from "@/components/ui/theme/theme-toggle";
+import { usePagination } from "@/hooks/usePagination";
 import { certificates } from "@/lib/values/certificates";
 import Image from "next/image";
 
 export default function Certificates(){
+  const { currentItems, currentPage, totalPages, setCurrentPage } = usePagination(certificates, 4);    
+
     return (
         <div className="min-h-screen bg-background">
             <div className="max-w-6xl mx-auto px-6 py-12">
@@ -58,7 +63,9 @@ export default function Certificates(){
                             A collection of certifications I&apos;ve earned, highlighting my skills, professional development, and commitment to continuous learning.
                             </p>
                         </div>
-                        <CertificateModal certificates={certificates} />
+                        <CertificateModal certificates={currentItems} />
+
+                        <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
                     </div>
                 </div>
             </div>
