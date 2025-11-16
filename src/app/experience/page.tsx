@@ -13,7 +13,7 @@ export default function ExperiencePage() {
     <div className="min-h-screen bg-background">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        {/* Left Sidebar */}
+         {/* Left Sidebar */}
          <div className="lg:col-span-4 space-y-5">
                 <div className="relative w-55 h-55 ml-5 group">
                     {/* Default Image */}

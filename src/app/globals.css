@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "keen-slider/keen-slider.min.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -163,4 +164,64 @@
     transform: translateX(100%);
   }
 }
+
+/* Embla Styles */
+.embla {
+  position: relative;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.embla__prev,
+.embla__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(20, 20, 20, 0.6);
+  padding: 8px 14px;
+  font-size: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.embla__prev {
+  left: 10px;
+}
+
+.embla__next {
+  right: 10px;
+}
+
+.embla__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.embla__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: gray;
+  opacity: 0.4;
+}
+
+.embla__dot--active {
+  opacity: 1;
+  background: white;
+}
+
 
