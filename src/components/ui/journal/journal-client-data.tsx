@@ -11,6 +11,7 @@ import { usePagination } from "@/hooks/usePagination";
 import { JournalPost } from "@/lib/interface/journal-post-props";
 import { journalPosts } from "@/lib/values/journal";
 import { JournalCategoryClientProps } from "@/lib/interface/journal-category-client-props";
+import { formatCategoryName } from "@/lib/helper/format-category-name";
 
 export default function JournalCategoryClient({ category }: JournalCategoryClientProps) {
   const posts: JournalPost[] = journalPosts[category] || [];
@@ -34,7 +35,7 @@ export default function JournalCategoryClient({ category }: JournalCategoryClien
             className="w-10 h-8 cursor-pointer" />
             </Link>
             <h1 className="text-3xl font-bold">
-                {category.replace("_", " ").toUpperCase()}
+                {formatCategoryName(category)}
             </h1>
         </div>
         <ThemeToggle />
