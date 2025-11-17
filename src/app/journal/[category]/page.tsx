@@ -7,8 +7,8 @@ export async function generateStaticParams() {
   return categories.map((category) => ({ category }));
 }
 
-export default function JournalCategoryPage({ params }: CategorySSGProps) {
-  const category = params.category as keyof typeof journalPosts;
+export default async function JournalCategoryPage({ params }: CategorySSGProps) {
+  const category = (await (params)).category as keyof typeof journalPosts;
 
   return <JournalCategoryClient category={category} />;
 }

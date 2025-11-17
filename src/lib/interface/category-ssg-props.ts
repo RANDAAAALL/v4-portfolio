@@ -1,4 +1,4 @@
 export interface CategorySSGProps {
-    params: { category: string };
+    params: Promise<{ category: string }>;
 }
   

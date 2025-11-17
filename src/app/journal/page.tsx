@@ -10,6 +10,7 @@ import { Footer } from "@/components/ui/footer/all-rights-reserved";
 import { journalPosts } from "@/lib/values/journal";
 import { usePagination } from "@/hooks/usePagination";
 import { formatCategoryName } from "@/lib/helper/format-category-name";
+import ImagePreviewContent from "@/components/ui/image-preview";
 
 export default function JournalPage() {
   const categories: (keyof typeof journalPosts)[] = [
@@ -31,23 +32,7 @@ export default function JournalPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* LEFT SIDEBAR */}
           <div className="lg:col-span-4 space-y-5">
-            <div className="relative w-55 h-55 ml-5 group">
-              <Image
-                className="rounded-full object-cover group-hover:hidden"
-                src="/randall-qt.png"
-                alt="profile-pic"
-                fill
-                sizes="360px"
-              />
-              <Image
-                className="rounded-full object-cover hidden group-hover:block"
-                src="/randall-qt-rayban.png"
-                alt="profile-pic-hover"
-                fill
-                priority
-                sizes="360px"
-              />
-            </div>
+            <ImagePreviewContent/>
 
             <div>
               <div className="flex items-start justify-between mb-2">

@@ -13,6 +13,7 @@ import Image from "next/image"
 import DownloadCVButton from "@/components/ui/download-button/download-cv-button"
 import { Footer } from "@/components/ui/footer/all-rights-reserved"
 import { usePagination } from "@/hooks/usePagination"
+import ImagePreviewContent from "@/components/ui/image-preview"
 
 export default function ProjectsPage() {
   const { currentItems, currentPage, totalPages, setCurrentPage } = usePagination(projects, 7);
@@ -26,25 +27,7 @@ export default function ProjectsPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Sidebar */}
           <div className="lg:col-span-4 space-y-5">
-                <div className="relative w-55 h-55 ml-5 group">
-                    {/* Default Image */}
-                    <Image
-                    className="rounded-full object-cover group-hover:hidden"
-                    src="/randall-qt.png"
-                    alt="profile-pic"
-                    fill
-                    sizes="360px"
-                    priority/>
-
-                    {/* Hover Image */}
-                    <Image
-                    className="rounded-full object-cover hidden group-hover:block"
-                    src="/randall-qt-rayban.png"
-                    alt="profile-pic-hover"
-                    sizes="360px"
-                    fill
-                    priority/>
-                </div>
+            <ImagePreviewContent/>
             <div>
               <div className="flex items-start justify-between mb-2">
                 <div>
