@@ -18,7 +18,7 @@ export default function JournalPage() {
     "davao_trip_vitro",
     "davao_trip_vikings",
     "davao_trip_jairosoft",
-    "davao trip 911",
+    "davao_trip_911",
   ];
 
   const { currentItems, currentPage, totalPages, setCurrentPage } = usePagination(

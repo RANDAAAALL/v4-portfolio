@@ -9,7 +9,6 @@ import { SocialLinks } from "@/components/ui/socials/social-links";
 import { ThemeToggle } from "@/components/ui/theme/theme-toggle";
 import { usePagination } from "@/hooks/usePagination";
 import { certificates } from "@/lib/values/certificates";
-import Image from "next/image";
 
 export default function Certificates(){
   const { currentItems, currentPage, totalPages, setCurrentPage } = usePagination(certificates, 4);    

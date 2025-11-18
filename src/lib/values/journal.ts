@@ -29,7 +29,7 @@ export const journalPosts: JournalPostsByCategory = {
     { id: 3, src: "/jairosoft/jairosoft_3.jpg", alt: "jairosoft_3" },
     { id: 4, src: "/jairosoft/jairosoft_4.jpg", alt: "jairosoft_4" },
   ],
-  "davao trip 911": [
+  "davao_trip_911": [
     { id: 1, src: "/911/911_1.jpg", alt: "911_1" },
     { id: 2, src: "/911/911_2.jpg", alt: "911_2" },
     { id: 3, src: "/911/911_3.jpg", alt: "911_3" },

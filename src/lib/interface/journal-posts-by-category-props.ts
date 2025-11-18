@@ -5,5 +5,5 @@ export interface JournalPostsByCategory {
     davao_trip_vitro: JournalPost[];
     davao_trip_vikings: JournalPost[];
     davao_trip_jairosoft: JournalPost[];
-    "davao trip 911": JournalPost[];
+    "davao_trip_911": JournalPost[];
   }

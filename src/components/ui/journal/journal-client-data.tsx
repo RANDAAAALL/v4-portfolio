@@ -28,13 +28,13 @@ export default function JournalCategoryClient({ category }: JournalCategoryClien
   return (
     <div className="min-h-screen bg-background">
     <div className="px-6 py-12 max-w-6xl mx-auto">
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-4 md:mb-6">
         <div className="flex items-center space-x-2">
             <Link href="/journal">
             <ArrowLeft 
-            className="w-10 h-8 cursor-pointer" />
+            className="w-7 md:w-10 md:h-8 cursor-pointer" />
             </Link>
-            <h1 className="text-3xl font-bold">
+            <h1 className="text-md md:text-3xl font-bold">
                 {formatCategoryName(category)}
             </h1>
         </div>
