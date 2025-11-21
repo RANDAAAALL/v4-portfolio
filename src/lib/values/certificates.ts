@@ -1,5 +1,10 @@
 export const certificates = [
     {
+      title: "Davao Tour",
+      provider: "World of Adventures Travel and Tours",
+      img: "/davao-tour-certificate.jpg",
+    },
+    {
       title: "Information Management",
       provider: "Codechum",
       img: "/information-management.png",
