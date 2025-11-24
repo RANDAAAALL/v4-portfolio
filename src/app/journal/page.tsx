@@ -14,6 +14,7 @@ import ImagePreviewContent from "@/components/ui/image-preview";
 
 export default function JournalPage() {
   const categories: (keyof typeof journalPosts)[] = [
+    "devfest_davao_2025",
     "davao_trip_before_departure",
     "davao_trip_vitro",
     "davao_trip_vikings",
@@ -21,10 +22,8 @@ export default function JournalPage() {
     "davao_trip_911",
   ];
 
-  const { currentItems, currentPage, totalPages, setCurrentPage } = usePagination(
-    categories,
-    2
-  );
+  const { currentItems, currentPage, totalPages, setCurrentPage } =
+    usePagination(categories, 2);
 
   return (
     <div className="min-h-screen bg-background">
@@ -32,7 +31,7 @@ export default function JournalPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* LEFT SIDEBAR */}
           <div className="lg:col-span-4 space-y-5">
-            <ImagePreviewContent/>
+            <ImagePreviewContent />
 
             <div>
               <div className="flex items-start justify-between mb-2">
@@ -40,13 +39,16 @@ export default function JournalPage() {
                   <h1 className="text-4xl font-bold text-foreground mb-2">
                     Lester Andig
                   </h1>
-                  <p className="text-xl text-primary mb-4">Full Stack Developer</p>
+                  <p className="text-xl text-primary mb-4">
+                    Full Stack Developer
+                  </p>
                 </div>
                 <ThemeToggle />
               </div>
 
               <p className="text-muted-foreground leading-relaxed">
-                I build user-friendly web applications that deliver seamless experiences.
+                I build user-friendly web applications that deliver seamless
+                experiences.
               </p>
             </div>
 
@@ -59,9 +61,12 @@ export default function JournalPage() {
           <div className="lg:col-span-8">
             {/* HEADER */}
             <div className="mb-8">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Journal</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                Journal
+              </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Explore my journals, documenting projects, experiences, and adventures.
+                Explore my journals, documenting projects, experiences, and
+                adventures.
               </p>
             </div>
 
@@ -69,8 +74,16 @@ export default function JournalPage() {
             <div className="space-y-8">
               {currentItems.length > 0 ? (
                 currentItems.map((category) => {
+                  const posts = journalPosts[category];
+                  const defaultImage = posts?.[0]?.src ?? "";
+
                   const firstImage =
-                    journalPosts[category as keyof typeof journalPosts][0].src;
+                    category === "devfest_davao_2025"
+                      ? (posts.find(
+                          (img) =>
+                            img.src === "/devfest_davao/devfest_davao_3.jpg"
+                        )?.src ?? defaultImage)
+                      : defaultImage;
 
                   return (
                     <Link
@@ -100,7 +113,9 @@ export default function JournalPage() {
                   );
                 })
               ) : (
-                <span className="text-muted-foreground">Journal coming soon...</span>
+                <span className="text-muted-foreground">
+                  Journal coming soon...
+                </span>
               )}
             </div>
 

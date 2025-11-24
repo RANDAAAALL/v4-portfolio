@@ -2,6 +2,17 @@ import { JournalPostsByCategory } from "../interface/journal-posts-by-category-p
 
 // data set
 export const journalPosts: JournalPostsByCategory = {
+  "devfest_davao_2025": [
+    { id: 1, src: "/devfest_davao/devfest_davao_1.jpg", alt: "devfest_davao_1" },
+    { id: 2, src: "/devfest_davao/devfest_davao_2.png", alt: "devfest_davao_2" },
+    { id: 3, src: "/devfest_davao/devfest_davao_3.jpg", alt: "devfest_davao_3" },
+    { id: 4, src: "/devfest_davao/devfest_davao_4.jpg", alt: "devfest_davao_4" },
+    { id: 5, src: "/devfest_davao/devfest_davao_5.jpg", alt: "devfest_davao_5" },
+    { id: 6, src: "/devfest_davao/devfest_davao_6.jpg", alt: "devfest_davao_6" },
+    { id: 7, src: "/devfest_davao/devfest_davao_7.jpg", alt: "devfest_davao_7" },
+    { id: 8, src: "/devfest_davao/devfest_davao_8.jpg", alt: "devfest_davao_8" },
+    { id: 9, src: "/devfest_davao/devfest_davao_9.jpg", alt: "devfest_davao_9" },
+  ],
   davao_trip_before_departure: [
     { id: 1, src: "/before_departure/before_departure_1.jpg", alt: "before_departure_1" },
     { id: 2, src: "/before_departure/before_departure_2.jpg", alt: "before_departure_2" },
