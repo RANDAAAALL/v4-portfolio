@@ -12,6 +12,7 @@ export const journalPosts: JournalPostsByCategory = {
     { id: 7, src: "/devfest_davao/devfest_davao_7.jpg", alt: "devfest_davao_7" },
     { id: 8, src: "/devfest_davao/devfest_davao_8.jpg", alt: "devfest_davao_8" },
     { id: 9, src: "/devfest_davao/devfest_davao_9.jpg", alt: "devfest_davao_9" },
+    { id: 10, src: "/devfest_davao/devfest_davao_10.jpg", alt: "devfest_davao_10" },
   ],
   davao_trip_before_departure: [
     { id: 1, src: "/before_departure/before_departure_1.jpg", alt: "before_departure_1" },
