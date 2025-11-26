@@ -23,8 +23,8 @@ export default function Certificates(){
                         <div>
                         <div className="flex items-start justify-between mb-2">
                             <div>
-                            <h1 className="text-4xl font-bold text-foreground mb-2">Lester Andig</h1>
-                            <p className="text-xl text-primary mb-4">Web Developer</p>
+                            <h1 className="text-4xl font-bold text-foreground mb-1">Lester Andig</h1>
+                            <p className="text-xl text-primary">Web Developer</p>
                             </div>
                             <ThemeToggle />
                         </div>
