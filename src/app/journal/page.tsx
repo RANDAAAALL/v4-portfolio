@@ -40,7 +40,7 @@ export default function JournalPage() {
                     Lester Andig
                   </h1>
                   <p className="text-xl text-primary mb-4">
-                    Full Stack Developer
+                  Web Developer
                   </p>
                 </div>
                 <ThemeToggle />

@@ -13,13 +13,13 @@ export default function TechStackPage() {
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Sidebar */}
-          <div className="lg:col-span-4 space-y-8">
+          <div className="lg:col-span-4 space-y-5">
             <ImagePreviewContent/>
             <div>
               <div className="flex items-start justify-between mb-2">
                 <div>
                   <h1 className="text-4xl font-bold text-foreground mb-2">Lester Andig</h1>
-                  <p className="text-xl text-primary mb-4">Full Stack Developer</p>
+                  <p className="text-xl text-primary mb-4">Web Developer</p>
                 </div>
                 <ThemeToggle />
               </div>
