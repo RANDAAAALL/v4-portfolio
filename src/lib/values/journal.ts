@@ -2,23 +2,84 @@ import { JournalPostsByCategory } from "../interface/journal-posts-by-category-p
 
 // data set
 export const journalPosts: JournalPostsByCategory = {
-  "devfest_davao_2025": [
-    { id: 1, src: "/devfest_davao/devfest_davao_1.jpg", alt: "devfest_davao_1" },
-    { id: 2, src: "/devfest_davao/devfest_davao_2.png", alt: "devfest_davao_2" },
-    { id: 3, src: "/devfest_davao/devfest_davao_3.jpg", alt: "devfest_davao_3" },
-    { id: 4, src: "/devfest_davao/devfest_davao_4.jpg", alt: "devfest_davao_4" },
-    { id: 5, src: "/devfest_davao/devfest_davao_5.jpg", alt: "devfest_davao_5" },
-    { id: 6, src: "/devfest_davao/devfest_davao_6.jpg", alt: "devfest_davao_6" },
-    { id: 7, src: "/devfest_davao/devfest_davao_7.jpg", alt: "devfest_davao_7" },
-    { id: 8, src: "/devfest_davao/devfest_davao_8.jpg", alt: "devfest_davao_8" },
-    { id: 9, src: "/devfest_davao/devfest_davao_9.jpg", alt: "devfest_davao_9" },
-    { id: 10, src: "/devfest_davao/devfest_davao_10.jpg", alt: "devfest_davao_10" },
+  devfest_davao_2025: [
+    {
+      id: 1,
+      src: "/devfest_davao/devfest_davao_1.jpg",
+      alt: "devfest_davao_1",
+    },
+    {
+      id: 2,
+      src: "/devfest_davao/devfest_davao_2.png",
+      alt: "devfest_davao_2",
+    },
+    {
+      id: 3,
+      src: "/devfest_davao/devfest_davao_3.jpg",
+      alt: "devfest_davao_3",
+    },
+    {
+      id: 4,
+      src: "/devfest_davao/devfest_davao_4.jpg",
+      alt: "devfest_davao_4",
+    },
+    {
+      id: 5,
+      src: "/devfest_davao/devfest_davao_5.jpg",
+      alt: "devfest_davao_5",
+    },
+    {
+      id: 6,
+      src: "/devfest_davao/devfest_davao_6.jpg",
+      alt: "devfest_davao_6",
+    },
+    {
+      id: 7,
+      src: "/devfest_davao/devfest_davao_7.jpg",
+      alt: "devfest_davao_7",
+    },
+    {
+      id: 8,
+      src: "/devfest_davao/devfest_davao_8.jpg",
+      alt: "devfest_davao_8",
+    },
+    {
+      id: 9,
+      src: "/devfest_davao/devfest_davao_9.jpg",
+      alt: "devfest_davao_9",
+    },
+    {
+      id: 10,
+      src: "/devfest_davao/devfest_davao_10.jpg",
+      alt: "devfest_davao_10",
+    },
+    {
+      id: 11,
+      src: "/devfest_davao/devfest_davao_11.jpg",
+      alt: "devfest_davao_11",
+    },
   ],
   davao_trip_before_departure: [
-    { id: 1, src: "/before_departure/before_departure_1.jpg", alt: "before_departure_1" },
-    { id: 2, src: "/before_departure/before_departure_2.jpg", alt: "before_departure_2" },
-    { id: 3, src: "/before_departure/before_departure_3.jpg", alt: "before_departure_3" },
-    { id: 4, src: "/before_departure/before_departure_4.jpg", alt: "before_departure_4" },
+    {
+      id: 1,
+      src: "/before_departure/before_departure_1.jpg",
+      alt: "before_departure_1",
+    },
+    {
+      id: 2,
+      src: "/before_departure/before_departure_2.jpg",
+      alt: "before_departure_2",
+    },
+    {
+      id: 3,
+      src: "/before_departure/before_departure_3.jpg",
+      alt: "before_departure_3",
+    },
+    {
+      id: 4,
+      src: "/before_departure/before_departure_4.jpg",
+      alt: "before_departure_4",
+    },
   ],
   davao_trip_vitro: [
     { id: 1, src: "/vitro/vitro_1.jpg", alt: "vitro_1" },
@@ -41,7 +102,7 @@ export const journalPosts: JournalPostsByCategory = {
     { id: 3, src: "/jairosoft/jairosoft_3.jpg", alt: "jairosoft_3" },
     { id: 4, src: "/jairosoft/jairosoft_4.jpg", alt: "jairosoft_4" },
   ],
-  "davao_trip_911": [
+  davao_trip_911: [
     { id: 1, src: "/911/911_1.jpg", alt: "911_1" },
     { id: 2, src: "/911/911_2.jpg", alt: "911_2" },
     { id: 3, src: "/911/911_3.jpg", alt: "911_3" },
