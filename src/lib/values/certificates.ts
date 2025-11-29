@@ -20,6 +20,11 @@ export const certificates = [
     img: "/information-management.png",
   },
   {
+    title: "Frontend Developer (React)",
+    provider: "HackerRank",
+    img: "/frontend-developer-react.png",
+  },
+  {
     title: "Responsive Web Design",
     provider: "FreeCodeCamp",
     img: "/responsive-web-design.png",
