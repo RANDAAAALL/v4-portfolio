@@ -10,6 +10,11 @@ export const certificates = [
     img: "/javascript_essentials_2.png",
   },
   {
+    title: "Devfest Participation",
+    provider: "Google Developer Davao",
+    img: "/devfest-participation.png",
+  },
+  {
     title: "Davao Tour",
     provider: "World of Adventures Travel and Tours",
     img: "/davao-tour-certificate.jpg",
