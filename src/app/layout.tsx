@@ -10,7 +10,7 @@ import ToasterClient from "@/components/ui/toast/toast-client"
 
 export const metadata: Metadata = {
   title: "Lester Andig",
-  description: "Portfolio of Lester Andig - Full Stack Developer specializing in React, Next.js, and modern web technologies",
+  description: "Portfolio of Lester Andig - Web Developer specializing in React, Next.js, and modern web technologies",
   icons: {
     icon: "/closing_tag_logo.png",
     shortcut: "/closing_tag_logo.png",
