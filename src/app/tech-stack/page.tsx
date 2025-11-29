@@ -13,7 +13,7 @@ export default function TechStackPage() {
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Sidebar */}
-          <div className="lg:col-span-4 space-y-5">
+          <div className="lg:col-span-4 space-y-4">
             <ImagePreviewContent />
             <div>
               <div className="flex items-start justify-between mb-2">
@@ -25,10 +25,6 @@ export default function TechStackPage() {
                 </div>
                 <ThemeToggle />
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                I build user-friendly web applications that deliver seamless
-                experiences.
-              </p>
             </div>
 
             <Navigation />

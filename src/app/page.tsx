@@ -13,7 +13,7 @@ export default function HomePage() {
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Sidebar */}
-          <div className="lg:col-span-4 space-y-5">
+          <div className="lg:col-span-4 space-y-4">
               <ImagePreviewContent />
             <div>
               <div className="flex items-start justify-between mb-2">
@@ -23,9 +23,9 @@ export default function HomePage() {
                 </div>
                 <ThemeToggle />
               </div>
-              <p className="text-muted-foreground leading-relaxed">
+              {/* <p className="text-muted-foreground leading-relaxed">
                 I build user-friendly web applications that deliver seamless experiences.
-              </p>
+              </p> */}
             </div>
 
             <Navigation />
@@ -37,7 +37,7 @@ export default function HomePage() {
           <div className="lg:col-span-8 space-y-12 h-auto lg:h-screen">
             <section>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                I&rsquo;m a developer passionate about building <span className="text-primary font-medium">user-friendly web applications</span>, with a strong focus on creating websites that are both visually appealing and highly functional. I enjoy working at the intersection of design and development, crafting digital experiences that are seamless, responsive, and easy to use.
+                I&rsquo;m a web developer building <span className="text-primary font-medium">user-friendly web applications</span>, with a strong focus on creating websites that are both visually appealing and highly functional. I enjoy working at the intersection of design and development, crafting digital experiences that are seamless, responsive, and easy to use.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
