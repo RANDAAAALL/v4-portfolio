@@ -54,7 +54,7 @@ export function CertificateModal({ certificates }: { certificates: CertificatesP
   return (
     <>
       {/* IMAGE GRID */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-card">
+      <div className={`grid grid-cols-1 sm:grid-cols-2 gap-6`}>
         {certificates.map((cert, i) => (
           <div key={i} onClick={() => openModal(i)} className="cursor-pointer group">
             <div className="relative w-full h-48 sm:h-56 lg:h-64 rounded-xl overflow-hidden border border-border">
@@ -62,7 +62,7 @@ export function CertificateModal({ certificates }: { certificates: CertificatesP
                 src={cert.img}
                 alt={cert.title}
                 fill
-                className="object-contain p-4 transition duration-200 group-hover:scale-102"
+                className="object-contain p-4 transition duration-300 group-hover:scale-102 bg-card"
               />
             </div>
           </div>

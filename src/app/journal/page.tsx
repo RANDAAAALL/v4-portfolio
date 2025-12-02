@@ -91,7 +91,7 @@ export default function JournalPage() {
                           src={firstImage}
                           alt={category}
                           fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-102"
+                          className="object-cover transition-transform duration-300 group-hover:scale-102"
                         />
 
                         {/* GRADIENT OVERLAY */}
