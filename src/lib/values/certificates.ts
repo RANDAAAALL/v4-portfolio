@@ -1,5 +1,10 @@
 export const certificates = [
   {
+    title: "Gemini Certified University Student",
+    provider: "Gemini",
+    img: "/gemini-certificate.png",
+  },
+  {
     title: "Javascript Essentials 1",
     provider: "Cisco",
     img: "/javascript_essentials_1.png",
