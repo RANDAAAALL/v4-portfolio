@@ -23,14 +23,12 @@ export function ThemeToggle() {
   }
 
   return (
-    <Button
-      variant="ghost"
-      size="icon"
+    <div
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="h-9 w-9"
+      className="absolute top-3.5 -right-5.5 cursor-pointer"
     >
       {theme === "dark" ? <Sun className="h-4 w-4 transition-all" /> : <Moon className="h-4 w-4 transition-all" />}
       <span className="sr-only">Toggle theme</span>
-    </Button>
+    </div>
   )
 }
