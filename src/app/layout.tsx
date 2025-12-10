@@ -12,9 +12,12 @@ export const metadata: Metadata = {
   title: "Lester Andig",
   description: "Portfolio of Lester Andig - Web Developer specializing in React, Next.js, and modern web technologies",
   icons: {
-    icon: "/closing_tag_logo.png",
-    shortcut: "/closing_tag_logo.png",
-    apple: "/closing_tag_logo.png",
+    // icon: "/closing_tag_logo.png",
+    // shortcut: "/closing_tag_logo.png",
+    // apple: "/closing_tag_logo.png",
+    icon: "/randall-qt-rayban.png",
+    shortcut: "/randall-qt-rayban.png",
+    apple: "/randall-qt-rayban.png",
   }
 }
 
