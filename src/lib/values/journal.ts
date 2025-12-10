@@ -89,6 +89,10 @@ export const journalPosts: JournalPostsByCategory = {
     { id: 5, src: "/vitro/vitro_5.jpg", alt: "vitro_5" },
     { id: 6, src: "/vitro/vitro_6.jpg", alt: "vitro_6" },
     { id: 7, src: "/vitro/vitro_7.jpg", alt: "vitro_7" },
+    { id: 8, src: "/vitro/vitro_8.jpg", alt: "vitro_8" },
+    { id: 9, src: "/vitro/vitro_9.jpg", alt: "vitro_9" },
+    { id: 10, src: "/vitro/vitro_10.jpg", alt: "vitro_10" },
+    { id: 11, src: "/vitro/vitro_11.jpg", alt: "vitro_11" },
   ],
   davao_trip_vikings: [
     { id: 1, src: "/vikings/vikings_1.jpg", alt: "vikings_1" },
@@ -101,6 +105,7 @@ export const journalPosts: JournalPostsByCategory = {
     { id: 2, src: "/jairosoft/jairosoft_2.jpg", alt: "jairosoft_2" },
     { id: 3, src: "/jairosoft/jairosoft_3.jpg", alt: "jairosoft_3" },
     { id: 4, src: "/jairosoft/jairosoft_4.jpg", alt: "jairosoft_4" },
+    { id: 5, src: "/jairosoft/jairosoft_5.jpg", alt: "jairosoft_5" },
   ],
   davao_trip_911: [
     { id: 1, src: "/911/911_1.jpg", alt: "911_1" },
@@ -108,5 +113,7 @@ export const journalPosts: JournalPostsByCategory = {
     { id: 3, src: "/911/911_3.jpg", alt: "911_3" },
     { id: 4, src: "/911/911_4.jpg", alt: "911_4" },
     { id: 5, src: "/911/911_5.jpg", alt: "911_5" },
+    { id: 6, src: "/911/911_6.jpg", alt: "911_6" },
+    { id: 7, src: "/911/911_7.jpg", alt: "911_7" },
   ],
 };
