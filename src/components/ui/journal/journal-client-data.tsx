@@ -38,7 +38,7 @@ export default function JournalCategoryClient({ category }: JournalCategoryClien
                 {formatCategoryName(category)}
             </h1>
         </div>
-        <ThemeToggle />
+          <ThemeToggle iconStyle="h-5 w-5"/>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

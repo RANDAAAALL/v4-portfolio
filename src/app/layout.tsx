@@ -9,6 +9,8 @@ import { ThemeProvider } from "@/components/ui/providers/theme-provider"
 import ToasterClient from "@/components/ui/toast/toast-client"
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://randall-is-a.dev"),
+
   title: "Lester Andig",
   description:
     "Portfolio of Lester Andig - Web Developer specializing in React, Next.js, and modern web technologies",

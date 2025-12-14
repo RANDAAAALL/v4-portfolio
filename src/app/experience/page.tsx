@@ -20,7 +20,7 @@ export default function ExperiencePage() {
               <div className="flex items-start justify-between mb-2">
                 <div>
                   <h1 className="text-4xl font-bold text-foreground mb-1 relative">Lester Andig
-                  <ThemeToggle />
+                  <ThemeToggle style="absolute top-3.5 -right-5.5" iconStyle="h-4 w-4"/>
                   </h1>
                   <p className="text-xl text-primary">Web Developer</p>
                 </div>
