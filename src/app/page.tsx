@@ -42,7 +42,7 @@ export default function HomePage() {
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Currently, I&rsquo;m a <span className="text-primary font-medium">3rd-year BSIT student</span>, enhancing my skills in modern web development while also working as a <span className="text-primary font-medium">freelancer</span>, taking on projects that challenge me to deliver high-quality solutions for real-world clients.
+                Currently, I&rsquo;m a <span className="text-primary font-medium">Bachelor of Science in Information Technology (BSIT) Student</span>, enhancing my skills in modern web development while also working as a <span className="text-primary font-medium">freelancer</span>, taking on projects that challenge me to deliver high-quality solutions for real-world clients.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
