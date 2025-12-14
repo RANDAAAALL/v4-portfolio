@@ -29,7 +29,7 @@ export const projects = [
       title: "Personal Portfolio",
       description:
         "A personal portfolio website that showcases my projects, skills, and experience as a full-stack developer.",
-      image: "/personal-portfolio.png",
+      image: "/personal-portfolio-v2.png",
       technologies: ["Next.js", "Typescript", "TailwindCSS", "Bun", "Resend API", "REST API", "React-Hot-Toast"],
       githubUrl: "https://github.com/RANDAAAALL/v4-portfolio",
       featured: true,
