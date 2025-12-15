@@ -43,7 +43,7 @@ export default function Certificates() {
 
             <Navigation />
             <SocialLinks />
-            <div className="flex flex-col space-y-2 w-53">
+            <div className="flex flex-col space-y-2 w-auto sm:w-53">
               <ContactForm>
                 <Button variant="outline" className="py-5 cursor-default">
                   Contact Me
