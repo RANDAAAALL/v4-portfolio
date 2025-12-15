@@ -11,6 +11,9 @@ import { journalPosts } from "@/lib/values/journal";
 import { usePagination } from "@/hooks/usePagination";
 import { formatCategoryName } from "@/lib/helper/format-category-name";
 import ImagePreviewContent from "@/components/ui/image-preview";
+import { Button } from "@/components/ui/button";
+import { ContactForm } from "@/components/ui/form/contact-form";
+import { Mail } from "lucide-react";
 
 export default function JournalPage() {
   const categories: (keyof typeof journalPosts)[] = [
@@ -29,27 +32,37 @@ export default function JournalPage() {
     <div className="min-h-screen bg-background">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* LEFT SIDEBAR */}
-          <div className="lg:col-span-4 space-y-4">
+         {/* Left Sidebar */}
+         <div className="lg:col-span-4 space-y-4">
             <ImagePreviewContent />
-
-            <div>
-              <div className="flex items-start justify-between mb-2">
+            <div className="mb-3">
+              <div className="flex items-start justify-between">
                 <div>
                   <h1 className="text-4xl font-bold text-foreground mb-1 relative">
                     Lester Andig
-                    <ThemeToggle style="absolute top-3.5 -right-5.5" iconStyle="h-4 w-4"/>
+                    <ThemeToggle
+                      style="absolute top-3.5 -right-5.5"
+                      iconStyle="h-4 w-4"
+                    />
                   </h1>
-                  <p className="text-xl text-primary">
-                  Web Developer
-                  </p>
                 </div>
               </div>
+              <p className="text-[17px] font-medium text-foreground ">
+                Web Developer<span> • </span>BSIT Student
+              </p>
             </div>
 
             <Navigation />
             <SocialLinks />
-            <DownloadCVButton />
+            <div className="flex flex-col space-y-2 w-53">
+              <ContactForm>
+                <Button variant="outline" className="py-5 cursor-default">
+                  <Mail className="h-4 w-4" />
+                  Contact Me
+                </Button>
+              </ContactForm>
+              <DownloadCVButton />
+            </div>
           </div>
 
           {/* MAIN CONTENT */}

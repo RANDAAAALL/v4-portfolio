@@ -1,25 +1,28 @@
-"use client"
+"use client";
 
-import { Navigation } from "@/components/ui/navigation/navigation"
-import { SocialLinks } from "@/components/ui/socials/social-links"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github } from "lucide-react"
-import Link from "next/link"
-import { ThemeToggle } from "@/components/ui/theme/theme-toggle"
-import { Pagination } from "@/components/ui/pagination/pagination"
-import { projects } from "@/lib/values/project"
-import Image from "next/image"
-import DownloadCVButton from "@/components/ui/download-button/download-cv-button"
-import { Footer } from "@/components/ui/footer/all-rights-reserved"
-import { usePagination } from "@/hooks/usePagination"
-import ImagePreviewContent from "@/components/ui/image-preview"
+import { Navigation } from "@/components/ui/navigation/navigation";
+import { SocialLinks } from "@/components/ui/socials/social-links";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink, Github, Mail } from "lucide-react";
+import Link from "next/link";
+import { ThemeToggle } from "@/components/ui/theme/theme-toggle";
+import { Pagination } from "@/components/ui/pagination/pagination";
+import { projects } from "@/lib/values/project";
+import Image from "next/image";
+import DownloadCVButton from "@/components/ui/download-button/download-cv-button";
+import { Footer } from "@/components/ui/footer/all-rights-reserved";
+import { usePagination } from "@/hooks/usePagination";
+import ImagePreviewContent from "@/components/ui/image-preview";
+import { ContactForm } from "@/components/ui/form/contact-form";
+import { Button } from "@/components/ui/button";
 
 export default function ProjectsPage() {
-  const { currentItems, currentPage, totalPages, setCurrentPage } = usePagination(projects, 7);
+  const { currentItems, currentPage, totalPages, setCurrentPage } =
+    usePagination(projects, 7);
 
-  const featuredProjects = currentItems.filter((project) => project.featured)
-  const otherProjects = currentItems.filter((project) => !project.featured)
+  const featuredProjects = currentItems.filter((project) => project.featured);
+  const otherProjects = currentItems.filter((project) => !project.featured);
 
   return (
     <div className="min-h-screen bg-background">
@@ -27,81 +30,102 @@ export default function ProjectsPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Sidebar */}
           <div className="lg:col-span-4 space-y-4">
-            <ImagePreviewContent/>
-            <div>
-              <div className="flex items-start justify-between mb-2">
+            <ImagePreviewContent />
+            <div className="mb-3">
+              <div className="flex items-start justify-between">
                 <div>
-                  <h1 className="text-4xl font-bold text-foreground mb-1 relative">Lester Andig
-                  <ThemeToggle style="absolute top-3.5 -right-5.5" iconStyle="h-4 w-4"/>
+                  <h1 className="text-4xl font-bold text-foreground mb-1 relative">
+                    Lester Andig
+                    <ThemeToggle
+                      style="absolute top-3.5 -right-5.5"
+                      iconStyle="h-4 w-4"
+                    />
                   </h1>
-                  <p className="text-xl text-primary">Web Developer</p>
                 </div>
               </div>
+              <p className="text-[17px] font-medium text-foreground ">
+                Web Developer<span> • </span>BSIT Student
+              </p>
             </div>
 
             <Navigation />
             <SocialLinks />
-            <DownloadCVButton />
+            <div className="flex flex-col space-y-2 w-53">
+              <ContactForm>
+                <Button variant="outline" className="py-5 cursor-default">
+                  <Mail className="h-4 w-4" />
+                  Contact Me
+                </Button>
+              </ContactForm>
+              <DownloadCVButton />
+            </div>
           </div>
 
           {/* Main Content */}
           <div className="lg:col-span-8">
             <div className="mb-8">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Projects</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                Projects
+              </h2>
               <p className="text-muted-foreground leading-relaxed">
-                A selection of projects  I&apos;ve worked on, ranging from web applications to personal and academic projects.
+                A selection of projects I&apos;ve worked on, ranging from web
+                applications to personal and academic projects.
               </p>
             </div>
 
             {/* Featured Projects */}
             {featuredProjects.length > 0 && (
               <div className="mb-12">
-                <h3 className="text-xl font-semibold text-foreground mb-6">Featured Projects</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-6">
+                  Featured Projects
+                </h3>
                 <div className="space-y-8">
                   {featuredProjects.map((project) => (
                     <Card key={project.id} className="group p-6">
                       <div>
                         <div>
-                        {Array.isArray(project.image) ? (
-                        <div className="flex justify-center gap-4">
-                          {project.image.map((img, index) => (
-                           <div
-                           key={index}
-                           className="relative w-full sm:w-1/2 lg:w-1/3 rounded-sm overflow-hidden">
-                           <Image
-                             src={img}
-                             alt={`${project.title} screenshot ${index + 1}`}
-                             width={400}
-                             height={250}
-                             className="object-cover w-full h-auto group-hover:scale-102 transition-transform duration-300"
-                           />
-                         </div>
-                          ))}
-                        </div>
-                      ) : (
-                        <div className="relative w-full rounded-sm overflow-hidden">
-                          <Image
-                            src={project.image || "/placeholder.svg"}
-                            alt={project.title}
-                            width={600}
-                            height={350}
-                            className="object-cover w-full group-hover:scale-102 transition-transform duration-300"/>                        
-                            {project.status && (
+                          {Array.isArray(project.image) ? (
+                            <div className="flex justify-center gap-4">
+                              {project.image.map((img, index) => (
+                                <div
+                                  key={index}
+                                  className="relative w-full sm:w-1/2 lg:w-1/3 rounded-sm overflow-hidden"
+                                >
+                                  <Image
+                                    src={img}
+                                    alt={`${project.title} screenshot ${index + 1}`}
+                                    width={400}
+                                    height={250}
+                                    className="object-cover w-full h-auto group-hover:scale-102 transition-transform duration-300"
+                                  />
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            <div className="relative w-full rounded-sm overflow-hidden">
+                              <Image
+                                src={project.image || "/placeholder.svg"}
+                                alt={project.title}
+                                width={600}
+                                height={350}
+                                className="object-cover w-full group-hover:scale-102 transition-transform duration-300"
+                              />
+                              {project.status && (
                                 <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                   <span className="text-white text-sm font-semibold px-3 py-1 rounded">
                                     {project.status}
                                   </span>
                                 </div>
                               )}
-                          </div>
-                        )}
+                            </div>
+                          )}
                         </div>
                         <div className="mt-6">
                           <CardHeader className="p-0 mb-2">
                             <div className="flex items-center justify-between">
                               <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
-                              {project.title}
-                              {/* {project.type && <span className="ml-1 text-foreground">| {project.type}</span>} */}
+                                {project.title}
+                                {/* {project.type && <span className="ml-1 text-foreground">| {project.type}</span>} */}
                               </CardTitle>
                               <div className="flex space-x-2">
                                 {project.liveUrl && (
@@ -109,7 +133,8 @@ export default function ProjectsPage() {
                                     href={project.liveUrl}
                                     className="text-muted-foreground hover:text-primary transition-colors"
                                     target="_blank"
-                                    rel="noopener noreferrer">
+                                    rel="noopener noreferrer"
+                                  >
                                     <ExternalLink className="h-5 w-5" />
                                   </Link>
                                 )}
@@ -117,7 +142,8 @@ export default function ProjectsPage() {
                                   href={project.githubUrl}
                                   className="text-muted-foreground hover:text-primary transition-colors"
                                   target="_blank"
-                                  rel="noopener noreferrer">
+                                  rel="noopener noreferrer"
+                                >
                                   <Github className="h-5 w-5" />
                                 </Link>
                               </div>
@@ -125,7 +151,9 @@ export default function ProjectsPage() {
                           </CardHeader>
 
                           <CardContent className="p-0">
-                            <p className="text-muted-foreground text-justify hyphens-auto leading-relaxed mb-4">{project.description}</p>
+                            <p className="text-muted-foreground text-justify hyphens-auto leading-relaxed mb-4">
+                              {project.description}
+                            </p>
                             <div className="flex flex-wrap gap-2">
                               {project.technologies.map((tech) => (
                                 <Badge key={tech} variant="secondary">
@@ -144,17 +172,19 @@ export default function ProjectsPage() {
             {/* Other Projects */}
             {otherProjects.length > 0 && (
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-6">Other Projects</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-6">
+                  Other Projects
+                </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {otherProjects.map((project) => (
-                    <Card 
-                      key={project.id} 
-                      className="group flex flex-col">
+                    <Card key={project.id} className="group flex flex-col">
                       {/* Image */}
                       <div className="h-55 -mb-4 px-6">
                         <div className="w-full h-full rounded-sm overflow-hidden">
                           <Image
-                            src={(project.image as string) || "/placeholder.svg"}
+                            src={
+                              (project.image as string) || "/placeholder.svg"
+                            }
                             alt={project.title}
                             width={400}
                             height={250}
@@ -176,7 +206,8 @@ export default function ProjectsPage() {
                                   href={project.liveUrl}
                                   className="text-muted-foreground hover:text-primary transition-colors"
                                   target="_blank"
-                                  rel="noopener noreferrer">
+                                  rel="noopener noreferrer"
+                                >
                                   <ExternalLink className="h-5 w-5" />
                                 </Link>
                               )}
@@ -184,7 +215,8 @@ export default function ProjectsPage() {
                                 href={project.githubUrl}
                                 className="text-muted-foreground hover:text-primary transition-colors"
                                 target="_blank"
-                                rel="noopener noreferrer">
+                                rel="noopener noreferrer"
+                              >
                                 <Github className="h-5 w-5" />
                               </Link>
                             </div>
@@ -197,7 +229,11 @@ export default function ProjectsPage() {
                           </p>
                           <div className="flex flex-wrap gap-2 mt-auto">
                             {project.technologies.map((tech) => (
-                              <Badge key={tech} variant="secondary" className="text-xs">
+                              <Badge
+                                key={tech}
+                                variant="secondary"
+                                className="text-xs"
+                              >
                                 {tech}
                               </Badge>
                             ))}
@@ -210,14 +246,18 @@ export default function ProjectsPage() {
               </div>
             )}
             {totalPages > 1 && (
-              <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={setCurrentPage}
+              />
             )}
           </div>
         </div>
       </div>
-      <div className="px-6"> 
+      <div className="px-6">
         <Footer />
       </div>
     </div>
-  )
+  );
 }

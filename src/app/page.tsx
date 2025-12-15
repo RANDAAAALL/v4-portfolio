@@ -1,102 +1,110 @@
-import { Navigation } from "@/components/ui/navigation/navigation"
-import { SocialLinks } from "@/components/ui/socials/social-links"
-import { ContactForm } from "@/components/ui/form/contact-form"
-import { Mail } from "lucide-react"
-import { ThemeToggle } from "@/components/ui/theme/theme-toggle"
-import DownloadCVButton from "@/components/ui/download-button/download-cv-button"
-import { Footer } from "@/components/ui/footer/all-rights-reserved"
-import ImagePreviewContent from "@/components/ui/image-preview"
+import { Navigation } from "@/components/ui/navigation/navigation";
+import { SocialLinks } from "@/components/ui/socials/social-links";
+import { Badge } from "@/components/ui/badge";
+import { ThemeToggle } from "@/components/ui/theme/theme-toggle";
+import { experiences } from "@/lib/values/experiences";
+import DownloadCVButton from "@/components/ui/download-button/download-cv-button";
+import { Footer } from "@/components/ui/footer/all-rights-reserved";
+import ImagePreviewContent from "@/components/ui/image-preview";
+import { ContactForm } from "@/components/ui/form/contact-form";
+import { ArrowRight, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-export default function HomePage() {
+export default function ExperiencePage() {
   return (
     <div className="min-h-screen bg-background">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Sidebar */}
           <div className="lg:col-span-4 space-y-4">
-              <ImagePreviewContent />
-            <div>
-              <div className="flex items-start justify-between mb-2">
+            <ImagePreviewContent />
+            <div className="mb-3">
+              <div className="flex items-start justify-between">
                 <div>
-                  <h1 className="text-4xl font-bold text-foreground mb-1 relative">Lester Andig
-                  <ThemeToggle style="absolute top-3.5 -right-5.5" iconStyle="h-4 w-4"/>
+                  <h1 className="text-4xl font-bold text-foreground mb-1 relative">
+                    Lester Andig
+                    <ThemeToggle
+                      style="absolute top-3.5 -right-5.5"
+                      iconStyle="h-4 w-4"
+                    />
                   </h1>
-                  <p className="text-xl text-primary">Web Developer</p>
                 </div>
               </div>
-              {/* <p className="text-muted-foreground leading-relaxed">
-                I build user-friendly web applications that deliver seamless experiences.
-              </p> */}
+              <p className="text-[17px] font-medium text-foreground ">
+                Web Developer<span> • </span>BSIT Student
+              </p>
             </div>
 
             <Navigation />
             <SocialLinks />
-            <DownloadCVButton />
+            <div className="flex flex-col space-y-2 w-53">
+              <ContactForm>
+                <Button variant="outline" className="py-5 cursor-default">
+                  Contact Me
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </ContactForm>
+              <DownloadCVButton />
+            </div>
           </div>
 
           {/* Main Content */}
-          <div className="lg:col-span-8 space-y-12 h-auto lg:h-screen">
-            <section>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                I&rsquo;m a web developer building <span className="text-primary font-medium">user-friendly web applications</span>, with a strong focus on creating websites that are both visually appealing and highly functional. I enjoy working at the intersection of design and development, crafting digital experiences that are seamless, responsive, and easy to use.
+          <div className="lg:col-span-8 ">
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                Experience
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                My experience in web development, focused on crafting
+                user-friendly and engaging digital experiences.
               </p>
+            </div>
 
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Currently, I&rsquo;m a <span className="text-primary font-medium">Bachelor of Science in Information Technology (BSIT) Student</span>, enhancing my skills in modern web development while also working as a <span className="text-primary font-medium">freelancer</span>, taking on projects that challenge me to deliver high-quality solutions for real-world clients.
-              </p>
-
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                I have experience developing software across various settings — from personal projects to client work — and I am always eager to explore new technologies and approaches to make applications more <span className="text-primary font-medium">efficient, accessible, and engaging</span>.
-              </p>
-            </section>
-
-            {/* Experience Preview */}
-            {/* <section className="space-y-6">
-              <div className="group">
-                <div className="flex items-start justify-between mb-2">
-                  <div>
-                    <p className="text-sm text-muted-foreground">2024 — PRESENT</p>
+            <div className="space-y-12">
+              {experiences.map((experience, index) => (
+                <div key={index} className="group relative">
+                  <div className="flex space-y-1.5 flex-col md:space-x-4  md:flex-row md:items-baseline">
+                    <div className="flex-shrink-0 w-32">
+                      <p className="text-sm text-muted-foreground font-mono">
+                        {experience.period}
+                      </p>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-1">
+                        {experience.title} · {experience.company}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed mb-4">
+                        {experience.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {experience.technologies.map((tech) => (
+                          <Badge key={tech} variant="secondary">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
-                  Senior Frontend Engineer, Accessibility · TechCorp
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mt-2">
-                  Build and maintain critical components used to construct TechCorp's frontend, across the whole
-                  product. Work closely with cross- functional teams, including developers, designers, and product
-                  managers, to implement and advocate for best practices in web accessibility.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-4">
-                  <Badge variant="secondary">JavaScript</Badge>
-                  <Badge variant="secondary">TypeScript</Badge>
-                  <Badge variant="secondary">React</Badge>
-                  <Badge variant="secondary">Next.js</Badge>
-                </div>
-              </div>
-            </section> */}
+              ))}
+            </div>
 
-            {/* Call-to-action section with contact form */}
-            <section className="border-t border-border pt-8">
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-foreground">Ready to work together?</h2>
-                <p className="text-muted-foreground max-w-md">
-                  I&rsquo;m always interested in new opportunities and exciting projects. Let&rsquo;s discuss how we can bring your
-                  ideas to life.
-                </p>
-                <ContactForm>
-                  <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-md font-medium transition-colors">
-                    <Mail className="h-4 w-4" />
-                    Let&rsquo;s get in touch
-                  </button>
-                </ContactForm>
-              </div>
-            </section>
+            <div className="mt-12 p-6 rounded-lg border border-border">
+              <h3 className="text-lg font-semibold text-foreground mb-2">
+                Let&rsquo;s Work Together
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-2">
+                I&rsquo;m always interested in new opportunities and exciting
+                projects. Whether you&rsquo;re looking for a developer or
+                collaborator, I&rsquo;d love to hear from you.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="px-6"> 
+      <div className="px-6 mt-8">
         <Footer />
       </div>
     </div>
-  )
+  );
 }

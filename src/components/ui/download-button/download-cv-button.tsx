@@ -1,5 +1,6 @@
 "use client";
 import { DownloadIcon } from "lucide-react"
+import { Button } from "../button";
 
 export default function DownloadCVButton() {
   const handleDownload = () => {
@@ -13,11 +14,13 @@ export default function DownloadCVButton() {
   };
 
   return (
-    <button
+    <Button
+      variant="outline"
       onClick={handleDownload}
-      className="cursor-pointer font-medium bg-primary text-primary-foreground px-6 py-3 rounded-md hover:bg-primary/90 w-full md:w-auto inline-flex items-center gap-1.5 justify-center">
+      className="py-5"
+      >
       Download CV
-      <DownloadIcon className="w-4.5 h-4.5"/>
-    </button>
+      <DownloadIcon className="w-4 h-4"/>
+    </Button>
   );
 }

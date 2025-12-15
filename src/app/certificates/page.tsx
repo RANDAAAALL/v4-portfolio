@@ -1,6 +1,8 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import DownloadCVButton from "@/components/ui/download-button/download-cv-button";
 import { Footer } from "@/components/ui/footer/all-rights-reserved";
+import { ContactForm } from "@/components/ui/form/contact-form";
 import ImagePreviewContent from "@/components/ui/image-preview";
 import { CertificateModal } from "@/components/ui/modal/certificate-modal";
 import { Navigation } from "@/components/ui/navigation/navigation";
@@ -9,6 +11,7 @@ import { SocialLinks } from "@/components/ui/socials/social-links";
 import { ThemeToggle } from "@/components/ui/theme/theme-toggle";
 import { usePagination } from "@/hooks/usePagination";
 import { certificates } from "@/lib/values/certificates";
+import { Mail } from "lucide-react";
 
 export default function Certificates() {
   const { currentItems, currentPage, totalPages, setCurrentPage } =
@@ -21,21 +24,34 @@ export default function Certificates() {
           {/* Left Sidebar */}
           <div className="lg:col-span-4 space-y-4">
             <ImagePreviewContent />
-            <div>
-              <div className="flex items-start justify-between mb-2">
+            <div className="mb-3">
+              <div className="flex items-start justify-between">
                 <div>
                   <h1 className="text-4xl font-bold text-foreground mb-1 relative">
                     Lester Andig
-                    <ThemeToggle style="absolute top-3.5 -right-5.5" iconStyle="h-4 w-4" />
+                    <ThemeToggle
+                      style="absolute top-3.5 -right-5.5"
+                      iconStyle="h-4 w-4"
+                    />
                   </h1>
-                  <p className="text-xl text-primary">Web Developer</p>
                 </div>
               </div>
+              <p className="text-[17px] font-medium text-foreground ">
+                Web Developer<span> • </span>BSIT Student
+              </p>
             </div>
 
             <Navigation />
             <SocialLinks />
-            <DownloadCVButton />
+            <div className="flex flex-col space-y-2 w-53">
+              <ContactForm>
+                <Button variant="outline" className="py-5 cursor-default">
+                  <Mail className="h-4 w-4" />
+                  Contact Me
+                </Button>
+              </ContactForm>
+              <DownloadCVButton />
+            </div>
           </div>
 
           <div className="lg:col-span-8">

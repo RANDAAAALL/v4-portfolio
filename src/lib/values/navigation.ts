@@ -1,6 +1,5 @@
 export const navigation = [
-    { name: "About", href: "/" },
-    { name: "Experience", href: "/experience" },
+    { name: "Experience", href: "/" },
     { name: "Projects", href: "/projects" },
     { name: "Certificates", href: "/certificates" },
     { name: "Journal", href: "/journal" },
