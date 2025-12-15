@@ -32,8 +32,8 @@ export default function JournalPage() {
     <div className="min-h-screen bg-background">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-         {/* Left Sidebar */}
-         <div className="lg:col-span-4 space-y-4">
+          {/* Left Sidebar */}
+          <div className="lg:col-span-4 space-y-4">
             <ImagePreviewContent />
             <div className="mb-3">
               <div className="flex items-start justify-between">
@@ -57,8 +57,8 @@ export default function JournalPage() {
             <div className="flex flex-col space-y-2 w-53">
               <ContactForm>
                 <Button variant="outline" className="py-5 cursor-default">
-                  <Mail className="h-4 w-4" />
                   Contact Me
+                  <Mail className="h-4 w-4" />
                 </Button>
               </ContactForm>
               <DownloadCVButton />

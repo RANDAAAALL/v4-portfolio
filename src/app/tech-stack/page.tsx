@@ -40,8 +40,8 @@ export default function TechStackPage() {
             <div className="flex flex-col space-y-2 w-53">
               <ContactForm>
                 <Button variant="outline" className="py-5 cursor-default">
-                  <Mail className="h-4 w-4" />
                   Contact Me
+                  <Mail className="h-4 w-4" />
                 </Button>
               </ContactForm>
               <DownloadCVButton />

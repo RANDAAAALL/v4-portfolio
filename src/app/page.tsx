@@ -7,7 +7,7 @@ import DownloadCVButton from "@/components/ui/download-button/download-cv-button
 import { Footer } from "@/components/ui/footer/all-rights-reserved";
 import ImagePreviewContent from "@/components/ui/image-preview";
 import { ContactForm } from "@/components/ui/form/contact-form";
-import { ArrowRight, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function ExperiencePage() {
@@ -41,7 +41,7 @@ export default function ExperiencePage() {
               <ContactForm>
                 <Button variant="outline" className="py-5 cursor-default">
                   Contact Me
-                  <ArrowRight className="h-4 w-4" />
+                  <Mail className="h-4 w-4" />
                 </Button>
               </ContactForm>
               <DownloadCVButton />
