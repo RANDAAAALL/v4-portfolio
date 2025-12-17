@@ -11,7 +11,7 @@ export const projects = [
       githubUrl: "https://github.com/RANDAAAALL/Abante-Clothing",
       featured: true,
       type: "School Project",
-      status: "Under development"
+      // status: "Under development"
     },
     {
       id: 2,

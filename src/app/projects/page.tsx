@@ -110,13 +110,13 @@ export default function ProjectsPage() {
                                 height={350}
                                 className="object-cover w-full group-hover:scale-102 transition-transform duration-300"
                               />
-                              {project.status && (
+                              {/* {project.status && (
                                 <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                   <span className="text-white text-sm font-semibold px-3 py-1 rounded">
                                     {project.status}
                                   </span>
                                 </div>
-                              )}
+                              )} */}
                             </div>
                           )}
                         </div>
