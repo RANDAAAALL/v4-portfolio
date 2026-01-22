@@ -57,7 +57,7 @@ export function CertificateModal({ certificates }: { certificates: CertificatesP
       <div className={`grid grid-cols-1 sm:grid-cols-2 gap-6`}>
         {certificates.map((cert, i) => (
           <div key={i} onClick={() => openModal(i)} className="cursor-pointer group">
-            <div className="relative w-full h-48 sm:h-56 lg:h-64 rounded-xl overflow-hidden border border-border">
+            <div className="relative w-full h-48 sm:h-56 lg:h-64 rounded-sm overflow-hidden border border-border">
               <Image
                 src={cert.img}
                 alt={cert.title}

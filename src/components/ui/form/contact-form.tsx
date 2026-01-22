@@ -13,7 +13,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { Mail, Send } from "lucide-react"
+import { SendHorizonal } from "lucide-react"
 import { ContactFormProps } from "@/lib/interface/contact-form-props"
 import { toast } from "react-hot-toast"
 
@@ -67,7 +67,6 @@ export function ContactForm({ children }: ContactFormProps) {
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <Mail className="h-5 w-5" />
             Let&rsquo;s Work Together
           </DialogTitle>
           <DialogDescription>
@@ -102,7 +101,7 @@ export function ContactForm({ children }: ContactFormProps) {
             <Textarea
               id="message"
               name="message"
-              placeholder="Tell me about your project..."
+              placeholder="Tell me about your idea..."
               className="min-h-[120px]"
               required
             />
@@ -113,7 +112,7 @@ export function ContactForm({ children }: ContactFormProps) {
               "Sending..."
             ) : (
               <>
-                <Send className="h-4 w-4 mr-2" />
+                <SendHorizonal className="h-4 w-4" />
                 Send message
               </>
             )}

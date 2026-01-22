@@ -8,7 +8,7 @@ import { Footer } from "@/components/ui/footer/all-rights-reserved";
 import ImagePreviewContent from "@/components/ui/image-preview";
 import { Button } from "@/components/ui/button";
 import { ContactForm } from "@/components/ui/form/contact-form";
-import { Mail } from "lucide-react";
+import { SendHorizonalIcon } from "lucide-react";
 
 export default function TechStackPage() {
   return (
@@ -41,7 +41,7 @@ export default function TechStackPage() {
               <ContactForm>
                 <Button variant="outline" className="py-5 cursor-default">
                   Contact Me
-                  <Mail className="h-4 w-4" />
+                  <SendHorizonalIcon className="h-4 w-4" />
                 </Button>
               </ContactForm>
               <DownloadCVButton />
@@ -61,7 +61,7 @@ export default function TechStackPage() {
 
             <div className="space-y-8">
               {Object.entries(techStack).map(([category, technologies]) => (
-                <Card key={category}>
+                <Card key={category} className="rounded-sm">
                   <CardHeader>
                     <CardTitle className="text-xl text-foreground">
                       {category}
@@ -74,7 +74,7 @@ export default function TechStackPage() {
                         return (
                           <div
                             key={tech.name}
-                            className="flex items-start gap-3 p-4 rounded-lg border border-border"
+                            className="flex items-start gap-3 p-4 rounded-sm border border-border"
                           >
                             <div className="mt-1 text-primary">
                               <Icon className="w-5 h-5" />
@@ -98,7 +98,7 @@ export default function TechStackPage() {
               ))}
             </div>
 
-            <div className="mt-12 p-6 rounded-lg border border-border">
+            <div className="mt-12 p-6 rounded-sm border border-border">
               <h3 className="text-lg font-semibold text-foreground mb-2">
                 Always Learning
               </h3>

@@ -13,7 +13,7 @@ import { formatCategoryName } from "@/lib/helper/format-category-name";
 import ImagePreviewContent from "@/components/ui/image-preview";
 import { Button } from "@/components/ui/button";
 import { ContactForm } from "@/components/ui/form/contact-form";
-import { Mail } from "lucide-react";
+import { SendHorizonalIcon } from "lucide-react";
 
 export default function JournalPage() {
   const categories: (keyof typeof journalPosts)[] = [
@@ -58,7 +58,7 @@ export default function JournalPage() {
               <ContactForm>
                 <Button variant="outline" className="py-5 cursor-default">
                   Contact Me
-                  <Mail className="h-4 w-4" />
+                  <SendHorizonalIcon className="h-4 w-4" />
                 </Button>
               </ContactForm>
               <DownloadCVButton />
@@ -99,7 +99,7 @@ export default function JournalPage() {
                       href={`/journal/${category}`}
                       className="block group"
                     >
-                      <div className="relative w-full h-72 rounded-xl overflow-hidden border border-border shadow-md hover:shadow-lg transition-shadow duration-300">
+                      <div className="relative w-full h-72 rounded-sm overflow-hidden border border-border shadow-md hover:shadow-lg transition-shadow duration-300">
                         <Image
                           src={firstImage}
                           alt={category}

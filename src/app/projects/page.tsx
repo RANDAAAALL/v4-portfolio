@@ -4,7 +4,7 @@ import { Navigation } from "@/components/ui/navigation/navigation";
 import { SocialLinks } from "@/components/ui/socials/social-links";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Mail } from "lucide-react";
+import { ExternalLink, Github, SendHorizonalIcon } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ui/theme/theme-toggle";
 import { Pagination } from "@/components/ui/pagination/pagination";
@@ -54,7 +54,7 @@ export default function ProjectsPage() {
               <ContactForm>
                 <Button variant="outline" className="py-5 cursor-default">
                   Contact Me
-                  <Mail className="h-4 w-4" />
+                  <SendHorizonalIcon className="h-4 w-4" />
                 </Button>
               </ContactForm>
               <DownloadCVButton />
@@ -81,7 +81,7 @@ export default function ProjectsPage() {
                 </h3>
                 <div className="space-y-8">
                   {featuredProjects.map((project) => (
-                    <Card key={project.id} className="group p-6">
+                    <Card key={project.id} className="group p-6 rounded-sm">
                       <div>
                         <div>
                           {Array.isArray(project.image) ? (
@@ -177,7 +177,7 @@ export default function ProjectsPage() {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {otherProjects.map((project) => (
-                    <Card key={project.id} className="group flex flex-col">
+                    <Card key={project.id} className="group flex flex-col rounded-sm">
                       {/* Image */}
                       <div className="h-55 -mb-4 px-6">
                         <div className="w-full h-full rounded-sm overflow-hidden">

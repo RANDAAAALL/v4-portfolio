@@ -11,7 +11,7 @@ import { SocialLinks } from "@/components/ui/socials/social-links";
 import { ThemeToggle } from "@/components/ui/theme/theme-toggle";
 import { usePagination } from "@/hooks/usePagination";
 import { certificates } from "@/lib/values/certificates";
-import { Mail } from "lucide-react";
+import { SendHorizonalIcon } from "lucide-react";
 
 export default function Certificates() {
   const { currentItems, currentPage, totalPages, setCurrentPage } =
@@ -47,7 +47,7 @@ export default function Certificates() {
               <ContactForm>
                 <Button variant="outline" className="py-5 cursor-default">
                   Contact Me
-                  <Mail className="h-4 w-4" />
+                  <SendHorizonalIcon className="h-4 w-4" />
                 </Button>
               </ContactForm>
               <DownloadCVButton />

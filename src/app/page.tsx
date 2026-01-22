@@ -7,7 +7,7 @@ import DownloadCVButton from "@/components/ui/download-button/download-cv-button
 import { Footer } from "@/components/ui/footer/all-rights-reserved";
 import ImagePreviewContent from "@/components/ui/image-preview";
 import { ContactForm } from "@/components/ui/form/contact-form";
-import { Mail } from "lucide-react";
+import { SendHorizonalIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function ExperiencePage() {
@@ -41,7 +41,7 @@ export default function ExperiencePage() {
               <ContactForm>
                 <Button variant="outline" className="py-5 cursor-default">
                   Contact Me
-                  <Mail className="h-4 w-4" />
+                  <SendHorizonalIcon className="h-4 w-4" />
                 </Button>
               </ContactForm>
               <DownloadCVButton />
@@ -63,7 +63,7 @@ export default function ExperiencePage() {
             <div className="space-y-12">
               {experiences.map((experience, index) => (
                 <div key={index} className="group relative">
-                  <div className="flex space-y-1.5 flex-col md:space-x-4  md:flex-row md:items-baseline">
+                  <div className="flex space-y-1.5 flex-col md:space-x-4 md:flex-row md:items-baseline">
                     <div className="flex-shrink-0 w-32">
                       <p className="text-sm text-muted-foreground font-mono">
                         {experience.period}
@@ -89,7 +89,7 @@ export default function ExperiencePage() {
               ))}
             </div>
 
-            <div className="mt-12 p-6 rounded-lg border border-border">
+            <div className="mt-12 p-6 rounded-sm border border-border">
               <h3 className="text-lg font-semibold text-foreground mb-2">
                 Let&rsquo;s Work Together
               </h3>

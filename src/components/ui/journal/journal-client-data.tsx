@@ -45,7 +45,7 @@ export default function JournalCategoryClient({ category }: JournalCategoryClien
         {currentItems.map((post, i) => (
           <div
             key={post.id}
-            className="relative w-full h-64 rounded-lg overflow-hidden cursor-pointer border border-border"
+            className="relative w-full h-64 rounded-sm overflow-hidden cursor-pointer border border-border"
             onClick={() => openModal(i)}
           >
             <Image src={post.src} alt={post.alt} fill className="object-cover" />
