@@ -12,7 +12,7 @@ export default function ImagePreviewContent() {
   if (!mounted) return null;
 
   return (
-    <div className="">
+    <div className="flex items-center justify-center md:items-start md:justify-start">
       <div className="relative w-59 h-59 group">
         {/* default image (light theme, hides on hover or dark mode) */}
         <Image

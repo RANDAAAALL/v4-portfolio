@@ -4,7 +4,7 @@ import { socialLinks } from "@/lib/values/socials";
 
 export function SocialLinks() {
   return (
-    <div className="flex space-x-4 items-center">
+    <div className="flex space-x-4 items-center justify-center md:justify-start">
       {socialLinks.map((link) => {
         const Icon = link.icon;
         return (

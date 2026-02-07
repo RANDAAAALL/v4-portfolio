@@ -35,28 +35,28 @@ export default function JournalPage() {
           {/* Left Sidebar */}
           <div className="lg:col-span-4 space-y-4">
             <ImagePreviewContent />
-            <div className="mb-3">
-              <div className="flex items-start justify-between">
+            <div className="mb-1 md:mb-3">
+              <div className="flex items-center justify-center md:items-start md:justify-between">
                 <div>
                   <h1 className="text-4xl font-bold text-foreground mb-1 relative">
                     Lester Andig
                     <ThemeToggle
-                      style="absolute top-3.5 -right-5.5"
+                      style="absolute top-3.5 -right-5"
                       iconStyle="h-4 w-4"
                     />
                   </h1>
                 </div>
               </div>
-              <p className="text-[17px] font-medium text-foreground ">
+              <p className="text-[17px] text-center md:text-start font-medium text-foreground ">
                 Web Developer<span> • </span>BSIT Student
               </p>
             </div>
 
             <Navigation />
             <SocialLinks />
-            <div className="flex flex-col space-y-2 w-auto sm:w-53">
+            <div className="flex items-center flex-col space-y-2 md:items-start">
               <ContactForm>
-                <Button variant="outline" className="py-5 cursor-default">
+                <Button variant="outline" className="w-59 md:w-53 py-5 cursor-default">
                   Contact Me
                   <SendHorizonalIcon className="h-4 w-4" />
                 </Button>

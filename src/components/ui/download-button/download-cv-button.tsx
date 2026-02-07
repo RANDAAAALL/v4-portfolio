@@ -17,7 +17,7 @@ export default function DownloadCVButton() {
     <Button
       variant="outline"
       onClick={handleDownload}
-      className="py-5"
+      className="py-5 w-59 md:w-53 "
       >
       Download CV
       <DownloadIcon className="w-4 h-4"/>
