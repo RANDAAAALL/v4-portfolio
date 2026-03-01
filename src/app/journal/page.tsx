@@ -17,6 +17,7 @@ import { SendHorizonalIcon } from "lucide-react";
 
 export default function JournalPage() {
   const categories: (keyof typeof journalPosts)[] = [
+    "AWS_cloud_catchup_2026",
     "devfest_davao_2025",
     "davao_trip_before_departure",
     "davao_trip_vitro",

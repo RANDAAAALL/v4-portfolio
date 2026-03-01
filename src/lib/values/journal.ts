@@ -2,6 +2,33 @@ import { JournalPostsByCategory } from "../interface/journal-posts-by-category-p
 
 // data set
 export const journalPosts: JournalPostsByCategory = {
+  AWS_cloud_catchup_2026: [
+    {
+      id:1,
+      src: "/aws_cloud_catchup/aws_cloud_catchup_2.jpg",
+      alt: "aws_cloud_catchup_2",
+    },
+    {
+      id:2,
+      src: "/aws_cloud_catchup/aws_cloud_catchup_1.jpg",
+      alt: "aws_cloud_catchup_1",
+    },
+    {
+      id:3,
+      src: "/aws_cloud_catchup/aws_cloud_catchup_3.jpg",
+      alt: "aws_cloud_catchup_3",
+    },
+    {
+      id:4,
+      src: "/aws_cloud_catchup/aws_cloud_catchup_4.jpg",
+      alt: "aws_cloud_catchup_4",
+    },
+    {
+      id:5,
+      src: "/aws_cloud_catchup/aws_cloud_catchup_5.jpg",
+      alt: "aws_cloud_catchup_5",
+    }
+  ],
   devfest_davao_2025: [
     {
       id: 1,
