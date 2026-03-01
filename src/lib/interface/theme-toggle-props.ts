@@ -1,5 +1,4 @@
-
-interface ThemeToggleProps {
-    style?: String;
-    iconStyle?: String;
+export interface ThemeToggleProps {
+    style?: string;
+    iconStyle?: string;
 }

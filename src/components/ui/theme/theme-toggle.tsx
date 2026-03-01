@@ -5,6 +5,7 @@ import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 import clsx from "clsx"
+import { ThemeToggleProps } from "@/lib/interface/theme-toggle-props"
 
 export function ThemeToggle({style, iconStyle} : ThemeToggleProps) {
   const { theme, setTheme } = useTheme()

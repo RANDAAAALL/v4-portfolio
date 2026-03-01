@@ -2,6 +2,20 @@
 export const projects = [
     {
       id: 1,
+      title: "Back Benchers",
+      description:
+        "A full-stack community platform for students, developers, gamers, and anyone who resonates with the back-bench culture. It features project showcases and live-updating Discord activity through seamless integration with the GitHub REST API, Discord API, and Lanyard API.",
+      image: "/back-benchers.png",
+      technologies: ["Next.js", "TypeScript", "Tanstack Query", "Bun", "Tailwind CSS", "Framer Motion", "Radix UI", "Upstash Redis", "Github REST API", "Lanyard API", "Discord API"],
+      liveUrl: "https://back-benchers.app/",
+      githubUrl: "https://github.com/RANDAAAALL/Abante-Clothing",
+      featured: true,
+      private: true,
+      type: "Personal Project",
+      // status: "Under development"
+    },
+    {
+      id: 2,
       title: "Abante Clothing",
       description:
         "A full-stack e-commerce web application built with Next.js, designed as the final project for IM-101. The platform includes basic SEO best practices, user authentication, custom payment, customer and an admin dashboard.",
@@ -10,11 +24,12 @@ export const projects = [
       liveUrl: "https://abante-clothing.vercel.app",
       githubUrl: "https://github.com/RANDAAAALL/Abante-Clothing",
       featured: true,
+      private: false,
       type: "School Project",
       // status: "Under development"
     },
     {
-      id: 2,
+      id: 3,
       title: "Mobile Quiz App",
       description:
         "A full-stack programming quiz app built with React Native Expo and powered by Firebase, designed as the final project for ADV-102. The application allow users to upload profile pictures, track scores, view leaderboard rankings, and review quiz history in real time.",
@@ -22,21 +37,23 @@ export const projects = [
       technologies: ["React Native Expo", "Typescript", "Javascript", "Node.js", "Express.js", "Firebase", "REST API", "QuizAPI"],
       githubUrl: "https://github.com/RANDAAAALL/Quiz-App",
       featured: true,
+      private: false,
       type: "School Project",
     },
     {
-      id: 3,
+      id: 4,
       title: "Personal Portfolio",
       description:
         "A personal portfolio website that showcases my projects, skills, and experience as a web developer.",
       image: "/personal-portfolio-v3.png",
       technologies: ["Next.js", "Typescript", "TailwindCSS", "Bun", "Resend API", "REST API", "React-Hot-Toast"],
       githubUrl: "https://github.com/RANDAAAALL/v4-portfolio",
-      featured: true,
+      featured: false,
+      private: false,
       type: "Personal Project",
     },
     {
-      id: 4,
+      id: 5,
       title: "Speedtyping test",
       description:
         "A speed typing test built with native web technologies. The app challenges users with a static word list, measuring typing speed and accuracy in real time without the use of external frameworks.",
@@ -45,10 +62,11 @@ export const projects = [
       liveUrl: "https://randaaaall.github.io/speed-typing-test/",
       githubUrl: "https://github.com/RANDAAAALL/speed-typing-test",
       featured: false,
+      private: false,
       type: "Personal Project",
     },
     {
-      id: 5,
+      id: 6,
       title: "Discord bot",
       description:
         "A custom Discord bot built with the Discord API for the Back Benchers server. It features a predefined set of questions and answers, enabling quick automated responses to common queries.",
@@ -56,10 +74,11 @@ export const projects = [
       technologies: ["Javacsript", "Discord API", "Express.js", "Node.js" ,"Node Cron"],
       githubUrl: "https://github.com/RANDAAAALL/discord-bot",
       featured: false,
+      private: false,
       type: "Personal Project",
     },
     {
-      id: 6,
+      id: 7,
       title: "Digital Clock",
       description:
         "A real-time digital clock built with native web technologies, designed to display the current time in the Philippines accurately and continuously without relying on external libraries.",
@@ -68,10 +87,11 @@ export const projects = [
       liveUrl: "https://randaaaall.github.io/Digital-Clock/",
       githubUrl: "https://github.com/RANDAAAALL/Digital-Clock",
       featured: false,
+      private: false,
       type: "Personal Project",
     },
     {
-      id: 7,
+      id: 8,
       title: "Medical Appointment System",
       description:
         "A medical appointment system GUI that allows adding, updating, and deleting patient records, including details such as name, age, gender, location, phone number, and appointment time.",
@@ -79,10 +99,11 @@ export const projects = [
       technologies: ["Java", "Java Swing"],
       githubUrl: "https://github.com/RANDAAAALL/medical-appointment-system",
       featured: false,
+      private: false,
       type: "School Project", 
     },
     {
-      id: 8,
+      id: 9,
       title: "Car Rental System",
       description:
       "A car rental system GUI with user registration and login functionality, enabling the management of car and customer information. The system allows adding, updating, and deleting records while also checking car rental availability.",
@@ -90,10 +111,11 @@ export const projects = [
       technologies: ["Java",  "Java Swing"],
       githubUrl: "https://github.com/RANDAAAALL/car-rental-system",
       featured: false,
+      private: false,
       type: "School Project",
     },
     {
-      id: 9,
+      id: 10,
       title: "CLI Quiz App",
       description:
       "A simple static command-line quiz game developed as a final project, featuring predefined questions and answers to test basic knowledge in an interactive way.",
@@ -101,10 +123,11 @@ export const projects = [
       technologies: ["C++"],
       githubUrl: "https://github.com/RANDAAAALL/1st_Sem_QuizGameFinalProject",
       featured: false,
+      private: false,
       type: "School Project",
       },
       {
-      id: 10,
+      id: 11,
       title: "Restaurant Management System",
       description:
         "A restaurant management system GUI built with Java Swing featuring both admin and customer panels. The system allows uploading food images, adding order items to a cart, managing orders, and generating receipts through an interactive graphical user interface.",
@@ -112,6 +135,7 @@ export const projects = [
       technologies: ["Java", "Java Swing",  "Mysql JDBC Driver", "Mysql"],
       githubUrl: "https://github.com/RANDAAAALL/restaurant-management-system",
       featured: false,
+      private: false,
       type: "School Project",
       },
   ]

@@ -138,6 +138,7 @@ export default function ProjectsPage() {
                                     <ExternalLink className="h-5 w-5" />
                                   </Link>
                                 )}
+                                {!project.private && (
                                 <Link
                                   href={project.githubUrl}
                                   className="text-muted-foreground hover:text-primary transition-colors"
@@ -146,6 +147,7 @@ export default function ProjectsPage() {
                                 >
                                   <Github className="h-5 w-5" />
                                 </Link>
+                                )}
                               </div>
                             </div>
                           </CardHeader>
