@@ -7,44 +7,18 @@ import "./globals.css"
 import { Suspense } from "react"
 import { ThemeProvider } from "@/components/ui/providers/theme-provider"
 import ToasterClient from "@/components/ui/toast/toast-client"
+import { metadataInfos } from "@/lib/values/metadata"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://randall-is-a.dev"),
-
-  title: "Lester Andig",
-  description:
-    "Portfolio of Lester Andig - Web Developer specializing in React, Next.js, and modern web technologies",
-
-  icons: {
-    icon: "/closing_tag_logo.png",
-    shortcut: "/closing_tag_logo.png",
-    apple: "/closing_tag_logo.png",
-  },
-
-  openGraph: {
-    title: "Lester Andig",
-    description:
-      "Portfolio of Lester Andig - Web Developer specializing in React, Next.js, and modern web technologies",
-    url: "https://your-portfolio-url.com",
-    siteName: "Lester Andig Portfolio",
-    images: [
-      {
-        url: "/randall-qt-rayban.png",
-        width: 1200,
-        height: 630,
-        alt: "Preview image of Lester Andig",
-      },
-    ],
-    type: "website",
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Lester Andig",
-    description:
-      "Portfolio of Lester Andig - Web Developer specializing in React, Next.js, and modern web technologies",
-    images: ["/randall-qt-rayban.png"],
-  },
+  metadataBase: metadataInfos.metaDatabase,
+  title: metadataInfos.titles.defaults,
+  description: metadataInfos.mainDescription,
+  keywords: metadataInfos.keywords,
+  creator: metadataInfos.creator,
+  robots: metadataInfos.robots as Metadata["robots"],
+  icons: metadataInfos.icons,
+  openGraph: metadataInfos.openGraph,
+  twitter: metadataInfos.twitter,
 };
 
 

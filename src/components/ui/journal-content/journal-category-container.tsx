@@ -13,7 +13,7 @@ import { journalPosts } from "@/lib/values/journal";
 import { JournalCategoryClientProps } from "@/lib/interface/journal-category-client-props";
 import { formatCategoryName } from "@/lib/helper/format-category-name";
 
-export default function JournalCategoryClient({ category }: JournalCategoryClientProps) {
+export default function JournalCategoryContainer({ category }: JournalCategoryClientProps) {
   const posts: JournalPost[] = journalPosts[category] || [];
 
   const [open, setOpen] = useState(false);
