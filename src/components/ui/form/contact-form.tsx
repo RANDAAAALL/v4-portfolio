@@ -64,7 +64,7 @@ export function ContactForm({ children }: ContactFormProps) {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="sm:max-w-[500px]">
+      <DialogContent className="sm:max-w-[500px bg-card">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             Let&rsquo;s Work Together
