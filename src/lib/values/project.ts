@@ -69,7 +69,7 @@ export const projects = [
       id: 6,
       title: "Discord bot",
       description:
-        "A custom Discord bot built with the Discord API for the Back Benchers server. It features a predefined set of questions and answers, enabling quick automated responses to common queries.",
+        "A custom 24/7 Discord bot built with the Discord API for the Back Benchers server. It features a predefined set of questions and answers, enabling quick automated responses to common queries.",
       image: "/discord-bot.png",
       technologies: ["Javacsript", "Discord API", "Express.js", "Node.js" ,"Node Cron"],
       githubUrl: "https://github.com/RANDAAAALL/discord-bot",
