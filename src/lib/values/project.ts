@@ -69,12 +69,12 @@ export const projects = [
       id: 6,
       title: "BackBenchers bot",
       description:
-        "A custom 24/7 Discord bot built with the Discord API for the Back Benchers server. It features a predefined set of questions and answers, enabling quick automated responses to common queries.",
+        "A custom 24/7 Discord bot built with Node.js, Discord.js API and Gemini AI API for Backbenchers server. It utilizes Generative AI and Natural Language Processing to provide dynamic, context-aware responses, hosted on an Azure VM for high availability.",
       image: "/discord-bot.png",
-      technologies: ["Javascript", "Discord.js", "Express.js", "Node.js" ,"Node Cron"],
+      technologies: ["Javascript", "Discord.js", "Express.js", "Node.js" ,"Node Cron", "Gemini AI API", "Microsoft Azure VM", "Linux/Ubuntu Shell", "PM2"],
       githubUrl: "https://github.com/RANDAAAALL/discord-bot",
       featured: false,
-      private: false,
+      private: true,
       type: "Personal Project",
     },
     {

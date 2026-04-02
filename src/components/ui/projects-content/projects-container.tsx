@@ -17,8 +17,8 @@ import ImagePreviewContent from "@/components/ui/image-preview";
 import { ContactForm } from "@/components/ui/form/contact-form";
 import { Button } from "@/components/ui/button";
 
-export default function ProjectsContainer(){
-    const { currentItems, currentPage, totalPages, setCurrentPage } =
+export default function ProjectsContainer() {
+  const { currentItems, currentPage, totalPages, setCurrentPage } =
     usePagination(projects, 7);
 
   const featuredProjects = currentItems.filter((project) => project.featured);
@@ -52,7 +52,10 @@ export default function ProjectsContainer(){
             <SocialLinks />
             <div className="flex items-center flex-col space-y-2 md:items-start">
               <ContactForm>
-                <Button variant="outline" className="w-59 md:w-53 py-5 cursor-default">
+                <Button
+                  variant="outline"
+                  className="w-59 md:w-53 py-5 cursor-default"
+                >
                   Contact Me
                   <SendHorizonalIcon className="h-4 w-4" />
                 </Button>
@@ -139,14 +142,14 @@ export default function ProjectsContainer(){
                                   </Link>
                                 )}
                                 {!project.private && (
-                                <Link
-                                  href={project.githubUrl}
-                                  className="text-muted-foreground hover:text-primary transition-colors"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <Github className="h-5 w-5" />
-                                </Link>
+                                  <Link
+                                    href={project.githubUrl}
+                                    className="text-muted-foreground hover:text-primary transition-colors"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    <Github className="h-5 w-5" />
+                                  </Link>
                                 )}
                               </div>
                             </div>
@@ -179,7 +182,10 @@ export default function ProjectsContainer(){
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {otherProjects.map((project) => (
-                    <Card key={project.id} className="group flex flex-col rounded-sm">
+                    <Card
+                      key={project.id}
+                      className="group flex flex-col rounded-sm"
+                    >
                       {/* Image */}
                       <div className="h-55 -mb-4 px-6">
                         <div className="w-full h-full rounded-sm overflow-hidden">
@@ -213,14 +219,17 @@ export default function ProjectsContainer(){
                                   <ExternalLink className="h-5 w-5" />
                                 </Link>
                               )}
-                              <Link
-                                href={project.githubUrl}
-                                className="text-muted-foreground hover:text-primary transition-colors"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <Github className="h-5 w-5" />
-                              </Link>
+
+                              {!project.private && (
+                                <Link
+                                  href={project.githubUrl}
+                                  className="text-muted-foreground hover:text-primary transition-colors"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Github className="h-5 w-5" />
+                                </Link>
+                              )}
                             </div>
                           </div>
                         </CardHeader>
