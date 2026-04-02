@@ -69,7 +69,7 @@ export const projects = [
       id: 6,
       title: "BackBenchers bot",
       description:
-        "A custom 24/7 Discord bot built with Node.js, Discord.js API and Gemini AI API for Backbenchers server. It utilizes Generative AI and Natural Language Processing to provide dynamic, context-aware responses, hosted on an Azure VM for high availability.",
+        "A custom 24/7 Discord bot built with Bun, Discord.js API and Gemini AI API for Backbenchers server. It utilizes Generative AI and Natural Language Processing to provide dynamic, context-aware responses, hosted on an Azure VM for high availability.",
       image: "/discord-bot.png",
       technologies: ["Typescript", "Discord.js", "Bun", "Node Cron", "Gemini AI API", "Microsoft Azure VM", "Linux/Ubuntu Shell", "PM2"],
       githubUrl: "https://github.com/RANDAAAALL/discord-bot",
