@@ -60,7 +60,7 @@ export default function ProjectsContainer() {
                   <SendHorizonalIcon className="h-4 w-4" />
                 </Button>
               </ContactForm>
-              <DownloadCVButton />
+              {/* <DownloadCVButton /> */}
             </div>
           </div>
 
