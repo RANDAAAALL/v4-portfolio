@@ -3,12 +3,12 @@ import { SocialLinks } from "@/components/ui/socials/social-links";
 import { Badge } from "@/components/ui/badge";
 import { ThemeToggle } from "@/components/ui/theme/theme-toggle";
 import { experiences } from "@/lib/values/experiences";
-import DownloadCVButton from "@/components/ui/download-button/download-cv-button";
+// import DownloadCVButton from "@/components/ui/download-button/download-cv-button";
 import { Footer } from "@/components/ui/footer/all-rights-reserved";
 import ImagePreviewContent from "@/components/ui/image-preview";
-import { ContactForm } from "@/components/ui/form/contact-form";
-import { SendHorizonalIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
+// import { ContactForm } from "@/components/ui/form/contact-form";
+// import { SendHorizonalIcon } from "lucide-react";
+// import { Button } from "@/components/ui/button";
 
 export default function LandingContainer() {
   return (
@@ -38,7 +38,7 @@ export default function LandingContainer() {
             <Navigation />
             <SocialLinks />
             <div className="flex items-center flex-col space-y-2 md:items-start">
-              <ContactForm>
+              {/* <ContactForm>
                 <Button
                   variant="outline"
                   className="w-59 md:w-53 py-5 cursor-default"
@@ -46,7 +46,7 @@ export default function LandingContainer() {
                   Contact Me
                   <SendHorizonalIcon className="h-4 w-4" />
                 </Button>
-              </ContactForm>
+              </ContactForm> */}
               {/* <DownloadCVButton /> */}
             </div>
           </div>

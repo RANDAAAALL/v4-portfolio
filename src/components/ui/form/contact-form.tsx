@@ -1,10 +1,10 @@
-"use client"
-import type React from "react"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
+"use client";
+import type React from "react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import {
   Dialog,
   DialogContent,
@@ -12,54 +12,67 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import { SendHorizonal } from "lucide-react"
-import { ContactFormProps } from "@/lib/interface/contact-form-props"
-import { toast } from "react-hot-toast"
+} from "@/components/ui/dialog";
+import { SendHorizonal } from "lucide-react";
+import { ContactFormProps } from "@/lib/interface/contact-form-props";
+import { toast } from "react-hot-toast";
 
 export function ContactForm({ children }: ContactFormProps) {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      const form = e.currentTarget.form;
+      if (form) {
+        form.requestSubmit();
+      }
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget)
-    const firstName = formData.get("firstName") as string
-    const lastName = formData.get("lastName") as string
-    const email = formData.get("email") as string
-    const subject = formData.get("subject") as string
-    const message = formData.get("message") as string
+    const formData = new FormData(e.currentTarget);
+    const firstName = formData.get("firstName") as string;
+    const lastName = formData.get("lastName") as string;
+    const email = formData.get("email") as string;
+    const subject = formData.get("subject") as string;
+    const message = formData.get("message") as string;
 
     // Simulate form submission
     // await new Promise((resolve) => setTimeout(resolve, 1000))
-    const res = await fetch("/api/send-email", { 
+    const res = await fetch("/api/send-email", {
       method: "POST",
-      headers: {"Content-Type": "application/json"},
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         name: `${firstName} ${lastName}`,
         senderEmail: email,
         subject,
-        message 
-      })
-     });
+        message,
+      }),
+    });
 
-     const data = await res.json();     
-     if(!res.ok) toast.error(`${data?.errorMessage || "Failed to send a message"}`)
-     else {
-      toast("Message Sent! Thanks for reaching out. I'll get back to you soon.", {icon: "😎"})
-      console.log("data:", data?.payload)
+    const data = await res.json();
+    if (!res.ok)
+      toast.error(`${data?.errorMessage || "Failed to send a message"}`);
+    else {
+      toast(
+        "Message Sent! Thanks for reaching out. I'll get back to you soon.",
+        { icon: "😎" },
+      );
+      console.log("data:", data?.payload);
     }
-     
 
-    setIsSubmitting(false)
-    setIsOpen(false)
+    setIsSubmitting(false);
+    setIsOpen(false);
 
     // Reset form
-    const form = e.target as HTMLFormElement
-    form.reset()
-  }
+    const form = e.target as HTMLFormElement;
+    form.reset();
+  };
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
@@ -70,7 +83,8 @@ export function ContactForm({ children }: ContactFormProps) {
             Let&rsquo;s Work Together
           </DialogTitle>
           <DialogDescription>
-            I&rsquo;d love to hear from you. Send me a message and I&rsquo;ll respond as soon as possible.
+            I&rsquo;d love to hear from you. Send me a message and I&rsquo;ll
+            respond as soon as possible.
           </DialogDescription>
         </DialogHeader>
 
@@ -78,7 +92,12 @@ export function ContactForm({ children }: ContactFormProps) {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="firstName">First name</Label>
-              <Input id="firstName" name="firstName" placeholder="John" required />
+              <Input
+                id="firstName"
+                name="firstName"
+                placeholder="John"
+                required
+              />
             </div>
             <div className="space-y-2">
               <Label htmlFor="lastName">Last name</Label>
@@ -88,12 +107,23 @@ export function ContactForm({ children }: ContactFormProps) {
 
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
-            <Input id="email" name="email" type="email" placeholder="john@example.com" required />
+            <Input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="john@example.com"
+              required
+            />
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="subject">Subject</Label>
-            <Input id="subject" name="subject" placeholder="Let's work together" required />
+            <Input
+              id="subject"
+              name="subject"
+              placeholder="Let's work together"
+              required
+            />
           </div>
 
           <div className="space-y-2">
@@ -103,6 +133,7 @@ export function ContactForm({ children }: ContactFormProps) {
               name="message"
               placeholder="Tell me about your idea..."
               className="min-h-[120px]"
+              onKeyDown={handleKeyDown}
               required
             />
           </div>
@@ -120,5 +151,5 @@ export function ContactForm({ children }: ContactFormProps) {
         </form>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

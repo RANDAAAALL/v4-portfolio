@@ -1,8 +1,8 @@
 "use client"
-import { Button } from "@/components/ui/button";
-import DownloadCVButton from "@/components/ui/download-button/download-cv-button";
+// import { Button } from "@/components/ui/button";
+// import DownloadCVButton from "@/components/ui/download-button/download-cv-button";
 import { Footer } from "@/components/ui/footer/all-rights-reserved";
-import { ContactForm } from "@/components/ui/form/contact-form";
+// import { ContactForm } from "@/components/ui/form/contact-form";
 import ImagePreviewContent from "@/components/ui/image-preview";
 import { CertificateModal } from "@/components/ui/modal/certificate-modal";
 import { Navigation } from "@/components/ui/navigation/navigation";
@@ -11,7 +11,7 @@ import { SocialLinks } from "@/components/ui/socials/social-links";
 import { ThemeToggle } from "@/components/ui/theme/theme-toggle";
 import { usePagination } from "@/hooks/usePagination";
 import { certificates } from "@/lib/values/certificates";
-import { SendHorizonalIcon } from "lucide-react";
+// import { SendHorizonalIcon } from "lucide-react";
 
 export default function CertificatesContainer(){
     const { currentItems, currentPage, totalPages, setCurrentPage } =
@@ -44,12 +44,12 @@ export default function CertificatesContainer(){
             <Navigation />
             <SocialLinks />
             <div className="flex items-center flex-col space-y-2 md:items-start">
-              <ContactForm>
+              {/* <ContactForm>
                 <Button variant="outline" className="w-59 md:w-53 py-5 cursor-default">
                   Contact Me
                   <SendHorizonalIcon className="h-4 w-4" />
                 </Button>
-              </ContactForm>
+              </ContactForm> */}
               {/* <DownloadCVButton /> */}
             </div>
           </div>

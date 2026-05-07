@@ -5,15 +5,15 @@ import { Navigation } from "@/components/ui/navigation/navigation";
 import { SocialLinks } from "@/components/ui/socials/social-links";
 import { ThemeToggle } from "@/components/ui/theme/theme-toggle";
 import { Pagination } from "@/components/ui/pagination/pagination";
-import DownloadCVButton from "@/components/ui/download-button/download-cv-button";
+// import DownloadCVButton from "@/components/ui/download-button/download-cv-button";
 import { Footer } from "@/components/ui/footer/all-rights-reserved";
 import { journalPosts } from "@/lib/values/journal";
 import { usePagination } from "@/hooks/usePagination";
 import { formatCategoryName } from "@/lib/helper/format-category-name";
 import ImagePreviewContent from "@/components/ui/image-preview";
-import { Button } from "@/components/ui/button";
-import { ContactForm } from "@/components/ui/form/contact-form";
-import { SendHorizonalIcon } from "lucide-react";
+// import { Button } from "@/components/ui/button";
+// import { ContactForm } from "@/components/ui/form/contact-form";
+// import { SendHorizonalIcon } from "lucide-react";
 
 export default function JournalContainer() {
   const categories: (keyof typeof journalPosts)[] = [
@@ -56,12 +56,12 @@ export default function JournalContainer() {
             <Navigation />
             <SocialLinks />
             <div className="flex items-center flex-col space-y-2 md:items-start">
-              <ContactForm>
+              {/* <ContactForm>
                 <Button variant="outline" className="w-59 md:w-53 py-5 cursor-default">
                   Contact Me
                   <SendHorizonalIcon className="h-4 w-4" />
                 </Button>
-              </ContactForm>
+              </ContactForm> */}
               {/* <DownloadCVButton /> */}
             </div>
           </div>
