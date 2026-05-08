@@ -70,7 +70,7 @@ export default function ProjectsContainer() {
               <h2 className="text-3xl font-bold text-foreground mb-4">
                 Projects
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground hyphens-auto text-justify md:text-start leading-relaxed">
                 A selection of projects I&apos;ve worked on, ranging from web
                 applications to personal and academic projects.
               </p>

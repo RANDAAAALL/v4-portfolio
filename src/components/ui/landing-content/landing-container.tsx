@@ -57,7 +57,7 @@ export default function LandingContainer() {
               <h2 className="text-3xl font-bold text-foreground mb-4">
                 Experience
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground hyphens-auto text-justify md:text-start leading-relaxed">
                 My experience in web development, focused on crafting
                 user-friendly and engaging digital experiences.
               </p>
@@ -76,7 +76,7 @@ export default function LandingContainer() {
                       <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-1">
                         {experience.title} · {experience.company}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed mb-4">
+                      <p className="text-muted-foreground hyphens-auto text-justify leading-relaxed mb-4">
                         {experience.description}
                       </p>
                       <div className="flex flex-wrap gap-2">

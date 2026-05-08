@@ -59,7 +59,7 @@ export default function CertificatesContainer(){
               <h2 className="text-3xl font-bold text-foreground mb-4">
                 Certificates
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground hyphens-auto text-justify md:text-start leading-relaxed">
                 A collection of certifications I&apos;ve earned, highlighting my
                 skills, professional development, and commitment to continuous
                 learning.
