@@ -4,12 +4,15 @@ import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { CertificatesProps } from "@/lib/interface/certificate-props";
+import { useCarouselKeyboardNavigation } from "@/hooks/useCarouselKeyboardNavigation";
 
 export function CertificateModal({ certificates }: { certificates: CertificatesProps[] }) {
   const [open, setOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
+  useCarouselKeyboardNavigation(emblaApi, open);
 
   useEffect(() => {
     if (open) {

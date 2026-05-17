@@ -17,6 +17,7 @@ import ImagePreviewContent from "@/components/ui/image-preview";
 
 export default function JournalContainer() {
   const categories: (keyof typeof journalPosts)[] = [
+    "build_with_ai_2026",
     "AWS_cloud_catchup_2026",
     "devfest_davao_2025",
     "davao_trip_before_departure",

@@ -18,10 +18,10 @@ export default function JournalCategoryContainer({ category }: JournalCategoryCl
 
   const [open, setOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { currentItems, currentPage, totalPages, setCurrentPage, startIndex } = usePagination(posts, 6);
+  const { currentItems, currentPage, totalPages, setCurrentPage } = usePagination(posts, 6);
 
   const openModal = (index: number) => {
-    setCurrentIndex(startIndex + index);
+    setCurrentIndex(index);
     setOpen(true);
   };
 
@@ -62,7 +62,7 @@ export default function JournalCategoryContainer({ category }: JournalCategoryCl
       </div>
       <JournalModal
         open={open}
-        posts={posts}
+        posts={currentItems}
         currentIndex={currentIndex}
         onClose={() => setOpen(false)}
       />

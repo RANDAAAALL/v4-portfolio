@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { JournalModalProps } from "@/lib/interface/journal-modal-props";
+import { useCarouselKeyboardNavigation } from "@/hooks/useCarouselKeyboardNavigation";
 
 export default function JournalModal({
   open,
@@ -12,6 +13,8 @@ export default function JournalModal({
 }: JournalModalProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(currentIndex);
+
+  useCarouselKeyboardNavigation(emblaApi, open);
 
   useEffect(() => {
     setSelectedIndex(currentIndex);

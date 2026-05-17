@@ -2,6 +2,48 @@ import { JournalPostsByCategory } from "../interface/journal-posts-by-category-p
 
 // data set
 export const journalPosts: JournalPostsByCategory = {
+  build_with_ai_2026: [
+    {
+      id: 1,
+      src: "/build_with_ai/build_with_ai_1.jpg",
+      alt: "build_with_ai_1",
+    },
+    {
+      id: 2,
+      src: "/build_with_ai/build_with_ai_2.jpg",
+      alt: "build_with_ai_2",
+    },
+    {
+      id: 3,
+      src: "/build_with_ai/build_with_ai_3.jpg",
+      alt: "build_with_ai_3",
+    },
+    {
+      id: 4,
+      src: "/build_with_ai/build_with_ai_4.jpg",
+      alt: "build_with_ai_4",
+    },
+    {
+      id: 5,
+      src: "/build_with_ai/build_with_ai_5.jpg",
+      alt: "build_with_ai_5",
+    },
+    {
+      id: 6,
+      src: "/build_with_ai/build_with_ai_6.jpg",
+      alt: "build_with_ai_6",
+    },
+    {
+      id: 7,
+      src: "/build_with_ai/build_with_ai_7.jpg",
+      alt: "build_with_ai_7",
+    },
+    {
+      id: 8,
+      src: "/build_with_ai/build_with_ai_8.jpg",
+      alt: "build_with_ai_8",
+    },
+  ],
   AWS_cloud_catchup_2026: [
     {
       id:1,
