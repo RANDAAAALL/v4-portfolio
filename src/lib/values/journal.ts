@@ -48,6 +48,16 @@ export const journalPosts: JournalPostsByCategory = {
       src: "/build_with_ai/build_with_ai_9.jpg",
       alt: "build_with_ai_9",
     },
+    {
+      id: 10,
+      src: "/build_with_ai/build_with_ai_10.jpg",
+      alt: "build_with_ai_10",
+    },
+    {
+      id: 11,
+      src: "/build_with_ai/build_with_ai_11.jpg",
+      alt: "build_with_ai_11",
+    },
   ],
   AWS_cloud_catchup_2026: [
     {
