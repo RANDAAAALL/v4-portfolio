@@ -1,6 +1,34 @@
 export const projects = [
   {
     id: 1,
+    title: "MangoLeaf AI",
+    description:
+      "MangoLeaf AI is a capstone project and offline-first progressive web application designed to support future Filipino Dabawenyo mango farmers in identifying possible diseases in mango leaves and fruit. It uses TensorFlow.js for browser-based classification, IndexedDB for local scan storage, and Supabase to sync records when connectivity is available.",
+    image: "/mangoleaf-ai.png",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Bun",
+      "Python",
+      "Jupyter Notebook",
+      "Tensorflow.js",
+      "MobileNetV3-Large",
+      "Dexie.js",
+      "IndexedDB",
+      "Supabase",
+      "PWA Serwist Service Worker",
+    ],
+    liveUrl: "https://mangoleaf-ai.vercel.app/",
+    githubUrl: "",
+    featured: true,
+    private: true,
+    type: "School Project",
+    // status: "Under development"
+  },
+  {
+    id: 2,
     title: "Back Benchers",
     description:
       "A full-stack community platform for students, developers, and gamers who resonate with the back-bench culture. It features project showcases and real-time Discord presence tracking via WebSocket integration with the Lanyard API, alongside seamless data synchronization with the GitHub and Discord REST APIs.",
@@ -19,14 +47,14 @@ export const projects = [
       "Discord API",
     ],
     liveUrl: "https://back-benchers.app/",
-    githubUrl: "https://github.com/RANDAAAALL/",
+    githubUrl: "",
     featured: true,
     private: true,
     type: "Personal Project",
     // status: "Under development"
   },
   {
-    id: 2,
+    id: 3,
     title: "Abante Clothing",
     description:
       "A full-stack e-commerce web application built with Next.js, designed as the final project for IM-101. The platform includes basic SEO best practices, user authentication, custom payment, customer and an admin dashboard.",
@@ -55,7 +83,7 @@ export const projects = [
     // status: "Under development"
   },
   {
-    id: 3,
+    id: 4,
     title: "Mobile Quiz App",
     description:
       "A full-stack programming quiz app built with React Native Expo and powered by Firebase, designed as the final project for ADV-102. The application allow users to upload profile pictures, track scores, view leaderboard rankings, and review quiz history in real time.",
@@ -76,7 +104,7 @@ export const projects = [
     type: "School Project",
   },
   {
-    id: 4,
+    id: 5,
     title: "Personal Portfolio",
     description:
       "A personal portfolio website that showcases my projects, skills, and experience as a web developer.",
@@ -96,7 +124,7 @@ export const projects = [
     type: "Personal Project",
   },
   {
-    id: 5,
+    id: 6,
     title: "Speedtyping test",
     description:
       "A speed typing test built with native web technologies. The app challenges users with a static word list, measuring typing speed and accuracy in real time without the use of external frameworks.",
@@ -109,7 +137,7 @@ export const projects = [
     type: "Personal Project",
   },
   {
-    id: 6,
+    id: 7,
     title: "BackBenchers bot",
     description:
       "A 24/7 AI-powered Discord assistant using TypeScript and Bun, implementing a multi-model failover system with Gemini AI and OpenRouter to ensure 100% uptime and bypass API rate limits.",
@@ -125,13 +153,13 @@ export const projects = [
       "OpenRouter",
       "PM2",
     ],
-    githubUrl: "https://github.com/RANDAAAALL/discord-bot",
+    githubUrl: "",
     featured: false,
     private: true,
     type: "Personal Project",
   },
   {
-    id: 7,
+    id: 8,
     title: "Digital Clock",
     description:
       "A real-time digital clock built with native web technologies, designed to display the current time in the Philippines accurately and continuously without relying on external libraries.",
@@ -144,7 +172,7 @@ export const projects = [
     type: "Personal Project",
   },
   {
-    id: 8,
+    id: 9,
     title: "Medical Appointment System",
     description:
       "A medical appointment system GUI that allows adding, updating, and deleting patient records, including details such as name, age, gender, location, phone number, and appointment time.",
@@ -156,7 +184,7 @@ export const projects = [
     type: "School Project",
   },
   {
-    id: 9,
+    id: 10,
     title: "Car Rental System",
     description:
       "A car rental system GUI with user registration and login functionality, enabling the management of car and customer information. The system allows adding, updating, and deleting records while also checking car rental availability.",
@@ -168,7 +196,7 @@ export const projects = [
     type: "School Project",
   },
   {
-    id: 10,
+    id: 11,
     title: "CLI Quiz App",
     description:
       "A simple static command-line quiz game developed as a final project, featuring predefined questions and answers to test basic knowledge in an interactive way.",
@@ -180,7 +208,7 @@ export const projects = [
     type: "School Project",
   },
   {
-    id: 11,
+    id: 12,
     title: "Restaurant Management System",
     description:
       "A restaurant management system GUI built with Java Swing featuring both admin and customer panels. The system allows uploading food images, adding order items to a cart, managing orders, and generating receipts through an interactive graphical user interface.",

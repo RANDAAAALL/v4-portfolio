@@ -19,7 +19,7 @@ import ImagePreviewContent from "@/components/ui/image-preview";
 
 export default function ProjectsContainer() {
   const { currentItems, currentPage, totalPages, setCurrentPage } =
-    usePagination(projects, 7);
+    usePagination(projects, 8);
 
   const featuredProjects = currentItems.filter((project) => project.featured);
   const otherProjects = currentItems.filter((project) => !project.featured);
