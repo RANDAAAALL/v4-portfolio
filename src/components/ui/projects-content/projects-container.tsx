@@ -14,6 +14,7 @@ import Image from "next/image";
 import { Footer } from "@/components/ui/footer/all-rights-reserved";
 import { usePagination } from "@/hooks/usePagination";
 import ImagePreviewContent from "@/components/ui/image-preview";
+import { ScrollToTopButton } from "@/components/ui/scroll-to-top/scroll-to-top-button";
 // import { ContactForm } from "@/components/ui/form/contact-form";
 // import { Button } from "@/components/ui/button";
 
@@ -269,6 +270,7 @@ export default function ProjectsContainer() {
       <div className="px-6">
         <Footer />
       </div>
+      <ScrollToTopButton />
     </div>
   );
 }
