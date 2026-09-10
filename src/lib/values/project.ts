@@ -22,10 +22,7 @@ export const projects = [
     ],
     liveUrl: "https://mangoleaf-ai.vercel.app/",
     githubUrl: "",
-    featured: true,
     private: true,
-    type: "School Project",
-    // status: "Under development"
   },
   {
     id: 2,
@@ -48,10 +45,7 @@ export const projects = [
     ],
     liveUrl: "https://back-benchers.app/",
     githubUrl: "",
-    featured: true,
     private: true,
-    type: "Personal Project",
-    // status: "Under development"
   },
   {
     id: 3,
@@ -77,10 +71,7 @@ export const projects = [
     ],
     liveUrl: "https://abante-clothing.vercel.app",
     githubUrl: "https://github.com/RANDAAAALL/Abante-Clothing",
-    featured: true,
     private: false,
-    type: "School Project",
-    // status: "Under development"
   },
   {
     id: 4,
@@ -99,9 +90,7 @@ export const projects = [
       "QuizAPI",
     ],
     githubUrl: "https://github.com/RANDAAAALL/Quiz-App",
-    featured: true,
     private: false,
-    type: "School Project",
   },
   {
     id: 5,
@@ -119,9 +108,7 @@ export const projects = [
       "React-Hot-Toast",
     ],
     githubUrl: "https://github.com/RANDAAAALL/v4-portfolio",
-    featured: false,
     private: false,
-    type: "Personal Project",
   },
   {
     id: 6,
@@ -132,9 +119,7 @@ export const projects = [
     technologies: ["HTML", "CSS", "Javascript"],
     liveUrl: "https://randaaaall.github.io/speed-typing-test/",
     githubUrl: "https://github.com/RANDAAAALL/speed-typing-test",
-    featured: false,
     private: false,
-    type: "Personal Project",
   },
   {
     id: 7,
@@ -154,9 +139,7 @@ export const projects = [
       "PM2",
     ],
     githubUrl: "",
-    featured: false,
     private: true,
-    type: "Personal Project",
   },
   {
     id: 8,
@@ -167,9 +150,7 @@ export const projects = [
     technologies: ["HTML", "Internal CSS", "Javascript"],
     liveUrl: "https://randaaaall.github.io/Digital-Clock/",
     githubUrl: "https://github.com/RANDAAAALL/Digital-Clock",
-    featured: false,
     private: false,
-    type: "Personal Project",
   },
   {
     id: 9,
@@ -179,9 +160,7 @@ export const projects = [
     image: "/medical-appointment-system.png",
     technologies: ["Java", "Java Swing"],
     githubUrl: "https://github.com/RANDAAAALL/medical-appointment-system",
-    featured: false,
     private: false,
-    type: "School Project",
   },
   {
     id: 10,
@@ -191,9 +170,7 @@ export const projects = [
     image: "/car-rental-system.png",
     technologies: ["Java", "Java Swing"],
     githubUrl: "https://github.com/RANDAAAALL/car-rental-system",
-    featured: false,
     private: false,
-    type: "School Project",
   },
   {
     id: 11,
@@ -203,9 +180,7 @@ export const projects = [
     image: "/cli-quiz-app.png",
     technologies: ["C++"],
     githubUrl: "https://github.com/RANDAAAALL/1st_Sem_QuizGameFinalProject",
-    featured: false,
     private: false,
-    type: "School Project",
   },
   {
     id: 12,
@@ -215,8 +190,6 @@ export const projects = [
     image: "/restaurant-management-system.png",
     technologies: ["Java", "Java Swing", "Mysql JDBC Driver", "Mysql"],
     githubUrl: "https://github.com/RANDAAAALL/restaurant-management-system",
-    featured: false,
     private: false,
-    type: "School Project",
   },
 ];

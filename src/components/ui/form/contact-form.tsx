@@ -35,49 +35,45 @@ export function ContactForm({ children }: ContactFormProps) {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const firstName = formData.get("firstName") as string;
     const lastName = formData.get("lastName") as string;
     const email = formData.get("email") as string;
     const subject = formData.get("subject") as string;
     const message = formData.get("message") as string;
 
-    // Simulate form submission
-    // await new Promise((resolve) => setTimeout(resolve, 1000))
-    const res = await fetch("/api/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: `${firstName} ${lastName}`,
-        senderEmail: email,
-        subject,
-        message,
-      }),
-    });
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: `${firstName} ${lastName}`,
+          senderEmail: email,
+          subject,
+          message,
+        }),
+      });
 
-    const data = await res.json();
-    if (!res.ok)
-      toast.error(`${data?.errorMessage || "Failed to send a message"}`);
-    else {
-      toast(
-        "Message Sent! Thanks for reaching out. I'll get back to you soon.",
-        { icon: "😎" },
-      );
-      console.log("data:", data?.payload);
+      const data = await res.json();
+      if (!res.ok) {
+        toast.error(data?.errorMessage || "Failed to send a message");
+        return;
+      }
+      toast.success("Message Sent! Thanks for reaching out. I'll get back to you soon.");
+      form.reset();
+      setIsOpen(false);
+    } catch {
+      toast.error("Could not send your message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
-
-    setIsSubmitting(false);
-    setIsOpen(false);
-
-    // Reset form
-    const form = e.target as HTMLFormElement;
-    form.reset();
   };
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="sm:max-w-[500px bg-card">
+      <DialogContent className="max-h-[90dvh] overflow-y-auto bg-card sm:max-w-[500px]">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             Let&rsquo;s Work Together
@@ -88,7 +84,7 @@ export function ContactForm({ children }: ContactFormProps) {
           </DialogDescription>
         </DialogHeader>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4" aria-busy={isSubmitting}>
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="firstName">First name</Label>

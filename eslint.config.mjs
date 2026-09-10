@@ -8,6 +8,7 @@ const eslintConfig = [
     ignores: [
       "node_modules/**",
       ".next/**",
+      ".playwright-mcp/**",
       "out/**",
       "build/**",
       "next-env.d.ts",

@@ -1,13 +1,14 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
+import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Suspense } from "react"
-import { ThemeProvider } from "@/components/ui/providers/theme-provider"
+import { PortfolioShell } from "@/components/ui/layout/portfolio-shell"
 import ToasterClient from "@/components/ui/toast/toast-client"
 import { metadataInfos } from "@/lib/values/metadata"
+
+const openSans = localFont({ src: "../../public/fonts/OpenSans-variable.ttf", variable: "--font-open-sans", weight: "300 800", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: metadataInfos.metaDatabase,
@@ -28,13 +29,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="white" enableSystem disableTransitionOnChange>
+    <html lang="en" className="dark">
+      <body className={`${openSans.variable} antialiased`}>
+        <PortfolioShell>
           <Suspense fallback={null}>{children}</Suspense>
-          <ToasterClient />
-          <Analytics />
-        </ThemeProvider>
+        </PortfolioShell>
+        <ToasterClient />
+        <Analytics />
       </body>
     </html>
   )

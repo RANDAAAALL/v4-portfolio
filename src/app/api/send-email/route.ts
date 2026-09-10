@@ -22,14 +22,11 @@ export async function POST(req: Request) {
     });
 
     if (error) {
-      // console.error("resend error:", error);
       return NextResponse.json({ errorMessage: error.message }, { status: 400 });
     }
 
-    // console.log("Resend success:", data);
     return NextResponse.json({ payload: data }, { status: 200 });
   } catch (error: unknown) {
-    // console.error("server error:", error);
   
     if (error instanceof Error) {
       return NextResponse.json({ errorMessage: error.message }, { status: 500 });

@@ -63,7 +63,7 @@ export const metadataInfos = {
     title: "Lester Andig",
     description:
       "Portfolio of Lester Andig - Web Developer specializing in React, Next.js, and modern web technologies",
-    url: "https://your-portfolio-url.com",
+    url: "https://randall-is-a.dev",
     siteName: "Lester Andig Portfolio",
     images: [
       {

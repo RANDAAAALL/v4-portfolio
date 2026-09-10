@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Html, Head, Preview, Body, Container, Section, Text } from "@react-email/components";
 import { type ContactEmailProps } from "@/lib/types/contact-email-types";
 
