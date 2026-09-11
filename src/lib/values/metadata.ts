@@ -67,10 +67,10 @@ export const metadataInfos = {
     siteName: "Lester Andig Portfolio",
     images: [
       {
-        url: "/randall-qt-rayban.png",
+        url: "/lester-social-preview.png",
         width: 1200,
         height: 630,
-        alt: "Preview image of Lester Andig",
+        alt: "Lester Andig's signature centered above his name on a dark background",
       },
     ],
     locale: "en_US",
@@ -82,6 +82,9 @@ export const metadataInfos = {
     title: "Lester Andig",
     description:
       "Portfolio of Lester Andig - Web Developer specializing in React, Next.js, and modern web technologies",
-    images: ["/randall-qt-rayban.png"],
+    images: [{
+      url: "/lester-social-preview.png",
+      alt: "Lester Andig's signature centered above his name on a dark background",
+    }],
   },
 };
