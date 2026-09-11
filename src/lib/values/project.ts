@@ -107,7 +107,7 @@ export const projects = [
       "REST API",
       "React-Hot-Toast",
     ],
-    githubUrl: "https://github.com/RANDAAAALL/v4-portfolio",
+    githubUrl: "https://github.com/RANDAAAALL/web-portfolio",
     private: false,
   },
   {
