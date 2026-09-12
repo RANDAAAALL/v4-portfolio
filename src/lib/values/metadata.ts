@@ -55,9 +55,12 @@ export const metadataInfos = {
     },
   },
   icons: {
-    icon: "/closing_tag_logo.png",
-    shortcut: "/closing_tag_logo.png",
-    apple: "/closing_tag_logo.png",
+    icon: [
+      { url: "/signature-favicon.png", type: "image/png", sizes: "32x32" },
+      { url: "/signature-favicon.svg", type: "image/svg+xml", sizes: "any" },
+    ],
+    shortcut: "/signature-favicon.png",
+    apple: { url: "/signature-apple-icon.png", sizes: "180x180", type: "image/png" },
   },
   openGraph: {
     title: "Lester Andig",

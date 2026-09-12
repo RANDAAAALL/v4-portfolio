@@ -68,7 +68,12 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath filter='url(%23n)' opacity='.8' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
 }
 .portfolio-shell { position: relative; width: calc(100% - 48px); max-width: 672px; margin-inline: auto; padding-block: 96px 48px; }
-.signature { display: block; width: 260px; max-width: none; height: 80px; margin-left: -29px; margin-bottom: 24px; }
+.signature { position: relative; display: block; width: 260px; max-width: none; height: 80px; margin-left: -29px; margin-bottom: 24px; }
+.signature-art { display: block; width: 100%; height: 100%; animation: signature-fallback 3000ms ease-out both; }
+.signature-particles { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; visibility: hidden; }
+.signature[data-signature-state] .signature-art { animation: none; }
+.signature[data-signature-state="running"] .signature-particles { visibility: visible; }
+@keyframes signature-fallback { 0%, 75% { opacity: 0; } 100% { opacity: 1; } }
 .portfolio-header { margin-bottom: 28px; }
 .identity-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
 .identity-details { flex-shrink: 0; }

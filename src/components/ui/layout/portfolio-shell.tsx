@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import Image from "next/image";
+import { Signature } from "@/components/ui/signature/signature";
 import { Navigation } from "@/components/ui/navigation/navigation";
 import { SocialLinks } from "@/components/ui/socials/social-links";
 import { Footer } from "@/components/ui/footer/all-rights-reserved";
@@ -12,7 +12,7 @@ export function PortfolioShell({ children }: { children: ReactNode }) {
     <div className="portfolio-shell">
       <a href="#main-content" className="skip-link">Skip to content</a>
       <header className="portfolio-header">
-        <Image src="/lester-signature.svg" alt="Lester Andig's signature" width={650} height={200} className="signature" priority />
+        <Signature />
         <div className="identity-row">
           <div className="identity-details">
             <h1 id="portfolio-name" tabIndex={-1}>Lester Andig</h1>
