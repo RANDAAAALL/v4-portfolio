@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const WIDTH = 260;
 const HEIGHT = 80;
-const DURATION = 3000;
+const DURATION = 2500;
 
 export function Signature() {
   const containerRef = useRef<HTMLDivElement>(null);
