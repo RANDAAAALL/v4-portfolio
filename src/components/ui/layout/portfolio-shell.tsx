@@ -16,7 +16,7 @@ export function PortfolioShell({ children }: { children: ReactNode }) {
         <div className="identity-row">
           <div className="identity-details">
             <h1 id="portfolio-name" tabIndex={-1}>Lester Andig</h1>
-            <p className="identity-role">Web Developer <span aria-hidden="true">·</span> BSIT Student</p>
+            <p className="identity-role">lstrndg</p>
           </div>
           <SocialLinks />
         </div>
